@@ -1,0 +1,24 @@
+header.page-header {
+  display: grid;
+  grid-template-columns: $sider-width 1fr;
+  height: $header-height;
+  background-color: $header-bg;
+  border-bottom: 1px solid $header-border-color;
+}
+
+.header-heading-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $header-padding-y $header-padding-x;
+  border-right: 1px solid $header-border-color;
+  .sider-toggler {
+    transition: $transition-base;
+  }
+}
+
+body.close-sider {
+  .sider-toggler {
+    transform: rotate(-180deg);
+  }
+}

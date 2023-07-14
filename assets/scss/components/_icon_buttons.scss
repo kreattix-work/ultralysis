@@ -1,0 +1,21 @@
+%btn-icon {
+  line-height: 0;
+  --bs-btn-border-radius: 50%;
+  --bs-btn-font-size: #{$btn-icon-font-size};
+
+  &.btn-outline-light {
+    --bs-btn-color: #70757c;
+  }
+}
+
+.btn-icon {
+  @extend %btn-icon;
+  --bs-btn-padding-y: #{$btn-icon-padding};
+  --bs-btn-padding-x: #{$btn-icon-padding};
+}
+
+.btn-icon-sm {
+  @extend %btn-icon;
+  --bs-btn-padding-y: #{$btn-icon-padding-sm};
+  --bs-btn-padding-x: #{$btn-icon-padding-sm};
+}
