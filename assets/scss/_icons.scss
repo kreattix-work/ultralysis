@@ -1,113 +1,123 @@
 @font-face {
-    font-family: 'ultralysis';
-    src:  url('../fonts/ultralysis/ultralysis.eot?sioww0');
-    src:  url('../fonts/ultralysis/ultralysis.eot?sioww0#iefix') format('embedded-opentype'),
-      url('../fonts/ultralysis/ultralysis.ttf?sioww0') format('truetype'),
-      url('../fonts/ultralysis/ultralysis.woff?sioww0') format('woff'),
-      url('../fonts/ultralysis/ultralysis.svg?sioww0#ultralysis') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-  }
-  
-  [class^="ultralysis-icon"], [class*=" ultralysis-icon"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'ultralysis' !important;
-    speak: never;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    
-    /* Enable Ligatures ================ */
-    letter-spacing: 0;
-    -webkit-font-feature-settings: "liga";
-    -moz-font-feature-settings: "liga=1";
-    -moz-font-feature-settings: "liga";
-    -ms-font-feature-settings: "liga" 1;
-    font-feature-settings: "liga";
-    -webkit-font-variant-ligatures: discretionary-ligatures;
-    font-variant-ligatures: discretionary-ligatures;
-  
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  .ultralysis-icon-add-category:before {
-    content: "\e900";
-  }
-  .ultralysis-icon-add:before {
-    content: "\e901";
-  }
-  .ultralysis-icon-delete:before {
-    content: "\e902";
-  }
-  .ultralysis-icon-discount-circle:before {
-    content: "\e903";
-  }
-  .ultralysis-icon-align-left:before {
-    content: "\e904";
-  }
-  .ultralysis-icon-upload-document:before {
-    content: "\e905";
-  }
-  .ultralysis-icon-down:before {
-    content: "\e906";
-  }
-  .ultralysis-icon-edit:before {
-    content: "\e907";
-  }
-  .ultralysis-icon-user-double:before {
-    content: "\e908";
-  }
-  .ultralysis-icon-user-group:before {
-    content: "\e909";
-  }
-  .ultralysis-icon-left:before {
-    content: "\e90a";
-  }
-  .ultralysis-icon-lock:before {
-    content: "\e90b";
-  }
-  .ultralysis-icon-minus-circle:before {
-    content: "\e90c";
-  }
-  .ultralysis-icon-setting:before {
-    content: "\e90d";
-  }
-  .ultralysis-icon-situation:before {
-    content: "\e90e";
-  }
-  .ultralysis-icon-tick-circle:before {
-    content: "\e90f";
-  }
-  .ultralysis-icon-upload:before {
-    content: "\e910";
-  }
-  .ultralysis-icon-wifi:before {
-    content: "\e911";
-  }
-  .ultralysis-icon-category:before {
-    content: "\e912";
-  }
-  .ultralysis-icon-chevron-right:before {
-    content: "\e913";
-  }
-  .ultralysis-icon-clear:before {
-    content: "\e914";
-  }
-  .ultralysis-icon-done:before {
-    content: "\e915";
-  }
-  .ultralysis-icon-arrow-left:before {
-    content: "\e916";
-  }
-  .ultralysis-icon-more:before {
-    content: "\e917";
-  }
-  .ultralysis-icon-rule:before {
-    content: "\e918";
-  }
-  
+  font-family: "ultralysis";
+  src: url("../fonts/ultralysis/ultralysis.eot?sioww0");
+  src: url("../fonts/ultralysis/ultralysis.eot?sioww0#iefix")
+      format("embedded-opentype"),
+    url("../fonts/ultralysis/ultralysis.ttf?sioww0") format("truetype"),
+    url("../fonts/ultralysis/ultralysis.woff?sioww0") format("woff"),
+    url("../fonts/ultralysis/ultralysis.svg?sioww0#ultralysis") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="ultralysis-icon"],
+[class*=" ultralysis-icon"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "ultralysis" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ultralysis-icon-chart:before {
+  content: "\e900";
+}
+.ultralysis-icon-key:before {
+  content: "\e901";
+}
+.ultralysis-icon-node:before {
+  content: "\e902";
+}
+.ultralysis-icon-add-category:before {
+  content: "\e903";
+}
+.ultralysis-icon-add:before {
+  content: "\e904";
+}
+.ultralysis-icon-delete:before {
+  content: "\e905";
+}
+.ultralysis-icon-discount-circle:before {
+  content: "\e906";
+}
+.ultralysis-icon-align-left:before {
+  content: "\e907";
+}
+.ultralysis-icon-upload-document:before {
+  content: "\e908";
+}
+.ultralysis-icon-down:before {
+  content: "\e909";
+}
+.ultralysis-icon-edit:before {
+  content: "\e90a";
+}
+.ultralysis-icon-user-double:before {
+  content: "\e90b";
+}
+.ultralysis-icon-user-group:before {
+  content: "\e90c";
+}
+.ultralysis-icon-left:before {
+  content: "\e90d";
+}
+.ultralysis-icon-lock:before {
+  content: "\e90e";
+}
+.ultralysis-icon-minus-circle:before {
+  content: "\e90f";
+}
+.ultralysis-icon-setting:before {
+  content: "\e910";
+}
+.ultralysis-icon-situation:before {
+  content: "\e911";
+}
+.ultralysis-icon-tick-circle:before {
+  content: "\e912";
+}
+.ultralysis-icon-upload:before {
+  content: "\e913";
+}
+.ultralysis-icon-wifi:before {
+  content: "\e914";
+}
+.ultralysis-icon-category:before {
+  content: "\e915";
+}
+.ultralysis-icon-chevron-right:before {
+  content: "\e916";
+}
+.ultralysis-icon-clear:before {
+  content: "\e917";
+}
+.ultralysis-icon-done:before {
+  content: "\e918";
+}
+.ultralysis-icon-arrow-left:before {
+  content: "\e919";
+}
+.ultralysis-icon-more:before {
+  content: "\e91a";
+}
+.ultralysis-icon-rule:before {
+  content: "\e91b";
+}

@@ -1,0 +1,9 @@
+@each $color, $value in $colors {
+  $color-rgb: to-rgb($value);
+  .text-#{$color} {
+    color: RGB(#{$color-rgb});
+  }
+  .bg-#{$color} {
+    background-color: RGB(#{$color-rgb});
+  }
+}

@@ -1,15 +1,70 @@
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900,
+);
+
 $light: #e0e3e5;
+$blue: #3387f6;
+$indigo: #6610f2;
+$purple: #977eff;
+$pink: #bf5dc1;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #efba31;
+$lime: #bdd338;
+$light-green: #9dda50;
+$green: #17a754;
+$teal: #20c997;
+$cyan: #2cc3d8;
+
+$colors: (
+  "blue": $blue,
+  "indigo": $indigo,
+  "purple": $purple,
+  "pink": $pink,
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "lime": $lime,
+  "light-green": $light-green,
+  "green": $green,
+  "teal": $teal,
+  "cyan": $cyan,
+  "black": $black,
+  "white": $white,
+  "gray": $gray-600,
+  "gray-dark": $gray-800,
+);
 
 $font-family-sans-serif: "Inter", sans-serif;
 $font-weight-base: 500;
 
-$spacer: 24px !default;
+$spacer: 24px;
 
 $focus-ring-width: 0rem;
 $focus-ring-opacity: 0;
 $focus-ring-color: transparent;
 $focus-ring-blur: 0;
-$focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color !default;
+$focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color;
 
 $border-color: #e0e3e5;
 $border-radius: 6px;
@@ -32,3 +87,7 @@ $header-padding-y: 6px;
 
 $sider-width: 264px;
 $sider-bg: #111416;
+$sider-padding-y: 24px;
+$sider-padding-x: 24px;
+
+$nav-font-color: #91979d;
