@@ -10,6 +10,11 @@
   transition: $transition-base;
   overflow-y: scroll;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  font-size: 13px;
+  color: $nav-font-color;
 }
 
 body.close-sider .page-sider {
@@ -22,10 +27,9 @@ body.close-sider .page-sider {
   gap: 20px;
   margin: 0;
   padding: 0;
+  list-style: none;
 
   .nav-item {
-    list-style: none;
-
     &-content {
       font-size: 13px;
       color: $nav-font-color;

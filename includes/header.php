@@ -21,3 +21,4 @@
         </div>
         <div class="header-content-block"></div>
     </header>
+    <?php include(BASEPATH.'includes/sider.php') ?>

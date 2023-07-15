@@ -104,4 +104,23 @@
         </li>
         <?php } ?>
     </ul>
+    <ul class="sider-nav">
+        <li class="sider-label">Account</li>
+        <li class="nav-item">
+            <div class="nav-item-content" onclick="toggleMenu(this)">
+                <span class="ultralysis-icon nav-item-icon">setting</span>
+                <div class="nav-item-text">Settings</div>
+            </div>
+        </li>
+        <li class="nav-item">
+            <div class="nav-item-content" onclick="toggleMenu(this)">
+                <span class="ultralysis-icon nav-item-icon">lock</span>
+                <div class="nav-item-text">Change Password</div>
+            </div>
+        </li>
+    </ul>
+    <button class="btn btn-lg btn-dark btn-block">
+        <span class="ultralysis-icon">logout</span>
+        <span>Logout</span>
+    </button>
 </aside>
