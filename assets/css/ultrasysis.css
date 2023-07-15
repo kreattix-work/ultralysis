@@ -6114,7 +6114,7 @@ header.page-header {
   border-right: 1px solid #e0e3e5;
 }
 .header-heading-block .sider-toggler {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 body.close-sider .sider-toggler {
@@ -6127,9 +6127,12 @@ body.close-sider .sider-toggler {
   top: 66px;
   bottom: 0;
   padding: 24px 24px;
+  padding-right: 21px;
   width: 264px;
   background-color: #111416;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body.close-sider .page-sider {
@@ -6153,7 +6156,7 @@ body.close-sider .page-sider {
   align-items: center;
   gap: 12px;
   padding: 4px 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.25s ease-in-out;
   cursor: pointer;
   border-radius: 6px;
   border: 1px solid transparent;
@@ -6199,4 +6202,20 @@ body.close-sider .page-sider {
 }
 .sider-nav .nav-submenu-item:hover {
   color: #fff;
+}
+
+.page-sider::-webkit-scrollbar {
+  background-color: transparent;
+  width: 3px;
+}
+.page-sider::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.page-sider::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.page-sider:hover::-webkit-scrollbar-thumb {
+  background-color: #6c757d;
 }
