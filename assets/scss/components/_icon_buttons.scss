@@ -1,11 +1,8 @@
 %btn-icon {
-  line-height: 0;
   --bs-btn-border-radius: 50%;
   --bs-btn-font-size: #{$btn-icon-font-size};
-
-  &.btn-outline-light {
-    --bs-btn-color: #70757c;
-  }
+  line-height: 0;
+  font-weight: 600;
 }
 
 .btn-icon {
@@ -20,12 +17,30 @@
   --bs-btn-padding-x: #{$btn-icon-padding-sm};
 }
 
-.btn-lg {
+%btn {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
+  font-weight: $font-weight-semibold;
+
+  &.btn-outline-light {
+    --bs-btn-color: $body-color;
+  }
+}
+
+.btn {
+  @extend %btn;
+  .ultralysis-icon {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+.btn-lg {
+  @extend %btn;
   gap: 12px;
   .ultralysis-icon {
     font-size: 20px;
+    font-weight: 600;
   }
 }
