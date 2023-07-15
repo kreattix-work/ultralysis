@@ -13,3 +13,23 @@
   font-size: 12px !important;
   color: #70757c;
 }
+
+.ag-root-wrapper,
+.ag-body {
+  --ag-border-color: #{$border-color} !important;
+  --ag-secondary-border-color: #{$border-color} !important;
+}
+
+.ag-body-vertical-scroll {
+  border-left: 1px solid $border-color;
+}
+.ag-body-vertical-scroll,
+.ag-body-vertical-scroll-viewport {
+  width: 3px !important;
+  min-width: 3px !important;
+  max-width: 3px !important;
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-500;
+  }
+}

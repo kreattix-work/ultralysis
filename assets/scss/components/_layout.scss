@@ -119,25 +119,6 @@ aside.page-sider {
       }
     }
   }
-
-  &::-webkit-scrollbar {
-    background-color: transparent;
-    width: 3px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: transparent;
-    transition: background-color 0.3s;
-  }
-  &:hover {
-    &::-webkit-scrollbar-thumb {
-      background-color: $gray-600;
-    }
-  }
 }
 
 body.close-sider {
@@ -173,5 +154,29 @@ body.close-sider {
   }
   .body-content {
     height: 100%;
+  }
+}
+
+aside.page-sider,
+.ag-body,
+.ag-body-vertical-scroll-viewport {
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    transition: background-color 0.3s;
+  }
+  &:hover,
+  &:hover .ag-body-vertical-scroll-viewport {
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray-500;
+    }
   }
 }

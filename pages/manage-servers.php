@@ -21,7 +21,7 @@
 <?php include_once("../includes/footer.php") ?>
 
 <script>
-var columnDefs = [{
+const columnDefs = [{
         headerName: "Server ID",
         field: "server_id"
     },
@@ -36,18 +36,24 @@ var columnDefs = [{
     }
 ];
 
-var rowData = [{
-    server_id: "29",
-    server_name: "Ultralysis.com/secure",
-}];
+const rowData = [];
 
-var gridOptions = {
+for (let i = 0; i <= 50; i++) {
+    rowData.push({
+        server_id: "29",
+        server_name: "Ultralysis.com/secure",
+    })
+}
+
+
+
+const gridOptions = {
     columnDefs: columnDefs,
     rowData: rowData
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-    var gridDiv = document.querySelector('#myGrid');
-    const gridApi = new agGrid.Grid(gridDiv, gridOptions);
+    const gridDiv = document.querySelector('#myGrid');
+    new agGrid.Grid(gridDiv, gridOptions);
 });
 </script>

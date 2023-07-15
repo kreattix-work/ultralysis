@@ -6232,21 +6232,6 @@ aside.page-sider .sider-nav .nav-submenu-item .submenu-bullet {
 aside.page-sider .sider-nav .nav-submenu-item:hover {
   color: #fff;
 }
-aside.page-sider::-webkit-scrollbar {
-  background-color: transparent;
-  width: 3px;
-}
-aside.page-sider::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-aside.page-sider::-webkit-scrollbar-thumb {
-  background-color: transparent;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-}
-aside.page-sider:hover::-webkit-scrollbar-thumb {
-  background-color: #6c757d;
-}
 
 body.close-sider .sider-toggler {
   transform: rotate(-180deg);
@@ -6281,6 +6266,32 @@ body.close-sider .page-sider {
   height: 100%;
 }
 
+aside.page-sider::-webkit-scrollbar,
+.ag-body::-webkit-scrollbar,
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar {
+  background-color: transparent;
+  width: 3px;
+}
+aside.page-sider::-webkit-scrollbar-track,
+.ag-body::-webkit-scrollbar-track,
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+aside.page-sider::-webkit-scrollbar-thumb,
+.ag-body::-webkit-scrollbar-thumb,
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+aside.page-sider:hover::-webkit-scrollbar-thumb, aside.page-sider:hover .ag-body-vertical-scroll-viewport::-webkit-scrollbar-thumb,
+.ag-body:hover::-webkit-scrollbar-thumb,
+.ag-body:hover .ag-body-vertical-scroll-viewport::-webkit-scrollbar-thumb,
+.ag-body-vertical-scroll-viewport:hover::-webkit-scrollbar-thumb,
+.ag-body-vertical-scroll-viewport:hover .ag-body-vertical-scroll-viewport::-webkit-scrollbar-thumb {
+  background-color: #adb5bd;
+}
+
 .ag-theme-alpine {
   flex: 1;
   width: 100%;
@@ -6295,4 +6306,25 @@ body.close-sider .page-sider {
 .ag-theme-alpine div.ag-row {
   font-size: 12px !important;
   color: #70757c;
+}
+
+.ag-root-wrapper,
+.ag-body {
+  --ag-border-color: #e0e3e5 !important;
+  --ag-secondary-border-color: #e0e3e5 !important;
+}
+
+.ag-body-vertical-scroll {
+  border-left: 1px solid #e0e3e5;
+}
+
+.ag-body-vertical-scroll,
+.ag-body-vertical-scroll-viewport {
+  width: 3px !important;
+  min-width: 3px !important;
+  max-width: 3px !important;
+}
+.ag-body-vertical-scroll::-webkit-scrollbar-thumb,
+.ag-body-vertical-scroll-viewport::-webkit-scrollbar-thumb {
+  background-color: #adb5bd;
 }
