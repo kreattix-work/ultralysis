@@ -53,6 +53,11 @@
   --bs-btn-hover-bg: #000;
   --bs-btn-hover-border-color: #000;
 }
+.btn-outline-light.active {
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #000;
+  --bs-btn-active-border-color: #000;
+}
 .btn-outline-danger {
   --bs-btn-border-color: #{$border-color};
 }

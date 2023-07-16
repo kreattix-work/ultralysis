@@ -7,7 +7,7 @@
         <div class="form-check form-switch">
             <input class="form-check-input" type="checkbox">
         </div>
-        <button class="btn btn-outline-danger">
+        <button class="btn btn-outline-light">
             <span class="ultralysis-icon">upload-document</span>
             <span>Export CSV</span>
         </button>
@@ -50,13 +50,14 @@ const columnDefs = [{
     {
         headerName: "Server Name",
         field: "server_name",
-        flex: 1
+        flex: 1,
     },
     {
         headerName: "Action",
         type: 'rightAligned',
         sortable: false,
         cellRenderer: ActionRenderer,
+        suppressSizeToFit: true
     }
 ];
 

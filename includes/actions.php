@@ -2,7 +2,7 @@
     <button class="btn-icon btn btn-outline-light">
         <span class="ultralysis-icon">delete</span>
     </button>
-    <div class="">
+    <div>
         <button class="btn-icon btn btn-outline-light dropdown-menu-toggle" onclick="dropdownMenu(this)">
             <span class="ultralysis-icon">more</span>
         </button>
@@ -21,3 +21,4 @@
             </li>
         </ul>
     </div>
+</div>

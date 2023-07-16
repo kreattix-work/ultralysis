@@ -6275,6 +6275,12 @@ progress {
   --bs-btn-hover-border-color: #000;
 }
 
+.btn-outline-light.active {
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #000;
+  --bs-btn-active-border-color: #000;
+}
+
 .btn-outline-danger {
   --bs-btn-border-color: #e0e3e5;
 }
@@ -6455,6 +6461,12 @@ aside.page-sider:hover::-webkit-scrollbar-thumb, aside.page-sider:hover .ag-body
   background-color: #adb5bd;
 }
 
+.box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .body-title {
   font-size: 18px;
   font-weight: 600;
@@ -6465,6 +6477,21 @@ aside.page-sider:hover::-webkit-scrollbar-thumb, aside.page-sider:hover .ag-body
   gap: 8px;
   justify-content: space-between;
   align-items: center;
+}
+
+.selected-chips {
+  background-color: #dee2e6;
+  color: #000;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.selected-chips .ultralysis-icon {
+  font-size: 16px;
+  color: #dc3545;
 }
 
 .ag-theme-alpine {
@@ -6536,7 +6563,7 @@ aside.page-sider:hover::-webkit-scrollbar-thumb, aside.page-sider:hover .ag-body
 }
 .dropdown-menu-open {
   position: fixed;
-  background-color: #f9f9f9;
+  background-color: #fff;
   min-width: 160px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   z-index: 1;
@@ -6557,9 +6584,10 @@ aside.page-sider:hover::-webkit-scrollbar-thumb, aside.page-sider:hover .ag-body
   padding: 8px;
   cursor: pointer;
   border-radius: 6px;
+  transition: all 0.4s;
 }
 .dropdown-menu-open li:hover {
-  background-color: #f1f1f1;
+  background-color: #dee2e6;
 }
 .dropdown-menu-open li .ultralysis-icon {
   font-size: 16px;

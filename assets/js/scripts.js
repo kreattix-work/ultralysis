@@ -75,8 +75,17 @@ function toggleMenu(element) {
 function positionDropdown(element, dropdown) {
   var rectElement = element.getBoundingClientRect();
   var rectDropdown = dropdown.getBoundingClientRect();
-  dropdown.style.top = rectElement.top + "px";
-  dropdown.style.left = rectElement.left - rectDropdown.width - 12 + "px";
+  console.log(element.getAttribute("placement"));
+  if (element.getAttribute("placement") === "bottom") {
+    dropdown.style.top = rectElement.bottom + 8 + "px";
+    dropdown.style.left =
+      rectElement.left -
+      Math.abs(rectElement.width - rectDropdown.width) / 2 +
+      "px";
+  } else {
+    dropdown.style.top = rectElement.top + "px";
+    dropdown.style.left = rectElement.left - rectDropdown.width - 8 + "px";
+  }
 }
 
 function dropdownMenu(element) {
@@ -84,23 +93,23 @@ function dropdownMenu(element) {
   if (opened) {
     opened.remove();
   }
-  if (!element.classList.contains("expanded")) {
+  if (!element.classList.contains("active")) {
     const allElements = document.querySelectorAll(".dropdown-menu-toggle");
     allElements.forEach((el) => {
-      el.classList.remove("expanded");
+      el.classList.remove("active");
     });
     const dropdown = element.nextElementSibling;
     const dropdownClone = dropdown.cloneNode(true);
     const pageBody = document.body;
 
-    element.classList.add("expanded");
+    element.classList.add("active");
     dropdownClone.classList.add("dropdown-menu-open");
     pageBody.appendChild(dropdownClone);
     positionDropdown(element, dropdownClone);
   } else {
     const allElements = document.querySelectorAll(".dropdown-menu-toggle");
     allElements.forEach((el) => {
-      el.classList.remove("expanded");
+      el.classList.remove("active");
     });
   }
 }
@@ -113,7 +122,7 @@ document.addEventListener("click", function (event) {
     }
     const allElements = document.querySelectorAll(".dropdown-menu-toggle");
     allElements.forEach((el) => {
-      el.classList.remove("expanded");
+      el.classList.remove("active");
     });
   }
 });
