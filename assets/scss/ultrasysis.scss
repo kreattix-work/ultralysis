@@ -9,6 +9,7 @@
 @import "../../node_modules/bootstrap/scss/root";
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/forms/form-check";
 
 @import "../../node_modules/bootstrap/scss/utilities/api";
 
@@ -17,4 +18,6 @@
 
 @import "components/icon_buttons";
 @import "components/layout";
+@import "components/body_header";
 @import "components/aggrid";
+@import "components/dropdown_menu";

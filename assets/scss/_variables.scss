@@ -1,3 +1,5 @@
+// $prefix: bs-;
+
 $white: #fff;
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
@@ -53,12 +55,17 @@ $colors: (
   "white": $white,
   "gray": $gray-600,
   "gray-dark": $gray-800,
+  "light": #70757c,
 );
 
 $font-family-sans-serif: "Inter", sans-serif;
 $font-weight-base: 500;
+$font-size-base: 12px;
 
-$transition-base: all 0.25s ease-in-out;
+$nav-link-padding-y: 6px;
+$nav-link-padding-x: 12px;
+
+$transition-base: all 0.4s;
 
 $spacer: 24px;
 
@@ -70,6 +77,8 @@ $focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color
 
 $border-color: #e0e3e5;
 $border-radius: 6px;
+
+$component-active-bg: $border-color;
 
 $btn-icon-font-size: 16px;
 $btn-icon-padding: 6px;
@@ -94,3 +103,13 @@ $sider-padding-y: 24px;
 $sider-padding-x: 24px;
 
 $nav-font-color: #91979d;
+
+$form-check-input-checked-bg-color: $green;
+
+$form-switch-color: $gray-300;
+$form-switch-focus-color: $gray-300;
+$form-switch-checked-color: $white;
+
+$form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4  8 8'><circle r='3.4' fill='#{$component-active-bg}'/></svg>");
+$form-switch-focus-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4  8 8'><circle r='3.4' fill='#{$component-active-bg}'/></svg>");
+$form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4  8 8'><circle r='3.4' fill='#{$form-switch-checked-color}'/></svg>");

@@ -121,15 +121,6 @@ aside.page-sider {
   }
 }
 
-body.close-sider {
-  .sider-toggler {
-    transform: rotate(-180deg);
-  }
-  .page-sider {
-    transform: translateX($sider-width * -1);
-  }
-}
-
 .page-body {
   margin-top: $header-height;
   margin-left: $sider-width;
@@ -139,6 +130,7 @@ body.close-sider {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transition: $transition-base;
 
   .body-header {
     display: flex;
@@ -146,14 +138,20 @@ body.close-sider {
     justify-content: space-between;
     align-items: center;
   }
-  .body-actions {
-    display: flex;
-    gap: 8px;
-    justify-content: space-between;
-    align-items: center;
-  }
   .body-content {
     height: 100%;
+  }
+}
+
+body.close-sider {
+  .sider-toggler {
+    transform: rotate(-180deg);
+  }
+  .page-sider {
+    transform: translateX($sider-width * -1);
+  }
+  .page-body {
+    margin-left: 0;
   }
 }
 

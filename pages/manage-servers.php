@@ -3,7 +3,11 @@
 <div class="body-header">
     <div class="body-title">Lists Servers</div>
     <div class="body-actions">
-        <button class="btn btn-outline-light">
+        <span class="text-light">Enable maintenance mode</span>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox">
+        </div>
+        <button class="btn btn-outline-danger">
             <span class="ultralysis-icon">upload-document</span>
             <span>Export CSV</span>
         </button>
@@ -11,6 +15,8 @@
             <span class="ultralysis-icon">add</span>
             <span>Add</span>
         </button>
+
+
     </div>
 </div>
 
@@ -21,6 +27,20 @@
 <?php include_once("../includes/footer.php") ?>
 
 <script>
+class ActionRenderer {
+    init(params) {
+        this.eGui = document.createElement('div');
+        this.eGui.innerHTML = `
+            <?php include(BASEPATH.'includes/actions.php') ?>
+        `;
+    }
+    getGui() {
+        return this.eGui;
+    }
+    refresh(params) {
+        return false;
+    }
+}
 const columnDefs = [{
         headerName: "Server ID",
         field: "server_id",
@@ -35,6 +55,8 @@ const columnDefs = [{
     {
         headerName: "Action",
         type: 'rightAligned',
+        sortable: false,
+        cellRenderer: ActionRenderer,
     }
 ];
 
@@ -51,6 +73,9 @@ for (let i = 0; i <= 50; i++) {
 
 const gridOptions = {
     columnDefs: columnDefs,
+    defaultColDef: {
+        sortable: true
+    },
     rowData: rowData,
     rowSelection: 'multiple',
     suppressRowClickSelection: true,

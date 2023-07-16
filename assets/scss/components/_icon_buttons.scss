@@ -2,7 +2,9 @@
   --bs-btn-border-radius: 50%;
   --bs-btn-font-size: #{$btn-icon-font-size};
   line-height: 0;
-  font-weight: 600;
+  .ultralysis-icon {
+    font-weight: 500 !important;
+  }
 }
 
 .btn-icon {
@@ -23,6 +25,7 @@
   justify-content: center;
   gap: 8px;
   font-weight: $font-weight-semibold;
+  transition: $transition-base;
 
   &.btn-outline-light {
     --bs-btn-color: $body-color;
@@ -43,4 +46,22 @@
     font-size: 20px;
     font-weight: 600;
   }
+}
+
+.btn-outline-light:hover {
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #000;
+  --bs-btn-hover-border-color: #000;
+}
+.btn-outline-danger {
+  --bs-btn-border-color: #{$border-color};
+}
+
+.form-check-input {
+  height: 1.25em;
+  cursor: pointer;
+}
+.form-switch .form-check-input {
+  font-size: 16px;
+  margin-left: -2em;
 }
