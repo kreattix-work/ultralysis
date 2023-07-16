@@ -33,3 +33,28 @@
     background-color: $gray-500;
   }
 }
+
+.ag-checkbox-input-wrapper {
+  input {
+    cursor: pointer;
+  }
+  &:active,
+  &:focus-within {
+    outline: none;
+    --ag-input-focus-box-shadow: none;
+  }
+  &:after {
+    outline: none !important;
+    cursor: pointer;
+  }
+
+  &:not(.ag-indeterminate):after {
+    font-family: "ultralysis";
+    --ag-icon-font-code-checkbox-unchecked: "\e91e";
+  }
+  &.ag-checked:after {
+    font-family: "ultralysis";
+    --ag-icon-font-code-checkbox-checked: "\e91d";
+    --ag-checkbox-checked-color: #{$green};
+  }
+}

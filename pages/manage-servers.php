@@ -23,7 +23,9 @@
 <script>
 const columnDefs = [{
         headerName: "Server ID",
-        field: "server_id"
+        field: "server_id",
+        headerCheckboxSelection: true,
+        checkboxSelection: true,
     },
     {
         headerName: "Server Name",
@@ -49,7 +51,9 @@ for (let i = 0; i <= 50; i++) {
 
 const gridOptions = {
     columnDefs: columnDefs,
-    rowData: rowData
+    rowData: rowData,
+    rowSelection: 'multiple',
+    suppressRowClickSelection: true,
 };
 
 document.addEventListener('DOMContentLoaded', function() {

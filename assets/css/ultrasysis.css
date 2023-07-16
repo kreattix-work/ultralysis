@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root,
 [data-bs-theme=light] {
   --bs-blue: #3387f6;
@@ -5967,6 +5968,14 @@ progress {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ultralysis-icon-checked-box:before {
+  content: "\e91d";
+}
+
+.ultralysis-icon-unchecked-box:before {
+  content: "\e91e";
+}
+
 .ultralysis-icon-chart:before {
   content: "\e900";
 }
@@ -6327,4 +6336,25 @@ aside.page-sider:hover::-webkit-scrollbar-thumb, aside.page-sider:hover .ag-body
 .ag-body-vertical-scroll::-webkit-scrollbar-thumb,
 .ag-body-vertical-scroll-viewport::-webkit-scrollbar-thumb {
   background-color: #adb5bd;
+}
+
+.ag-checkbox-input-wrapper input {
+  cursor: pointer;
+}
+.ag-checkbox-input-wrapper:active, .ag-checkbox-input-wrapper:focus-within {
+  outline: none;
+  --ag-input-focus-box-shadow: none;
+}
+.ag-checkbox-input-wrapper:after {
+  outline: none !important;
+  cursor: pointer;
+}
+.ag-checkbox-input-wrapper:not(.ag-indeterminate):after {
+  font-family: "ultralysis";
+  --ag-icon-font-code-checkbox-unchecked: "";
+}
+.ag-checkbox-input-wrapper.ag-checked:after {
+  font-family: "ultralysis";
+  --ag-icon-font-code-checkbox-checked: "";
+  --ag-checkbox-checked-color: #17a754;
 }
