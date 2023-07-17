@@ -1,5 +1,5 @@
 <div class="grid-actions">
-    <button class="btn-icon btn btn-outline-light">
+    <button class="btn-icon btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#deleteModal">
         <span class="ultralysis-icon">delete</span>
     </button>
     <div>
@@ -7,7 +7,7 @@
             <span class="ultralysis-icon">more</span>
         </button>
         <ul class="dropdown-menu">
-            <li>
+            <li data-bs-toggle="modal" data-bs-target="#deleteModal">
                 <span class="ultralysis-icon">delete</span>
                 Delete
             </li>

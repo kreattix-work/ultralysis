@@ -82,8 +82,8 @@
 
 <aside class="page-sider">
     <ul class="sider-nav">
-        <?php foreach($menu as $menuItem) { ?>
-        <li class="nav-item">
+        <?php foreach($menu as $key => $menuItem) { ?>
+        <li class="nav-item <?= $key == 0 ? 'active': '' ?>">
             <div class="nav-item-content" onclick="toggleMenu(this)">
                 <span class="ultralysis-icon nav-item-icon text-<?= $menuItem['color'] ?>">
                     <?= $menuItem['icon'] ?>
@@ -94,7 +94,7 @@
             <?php if(!empty($menuItem['subMenu'])){ ?>
             <ul class="nav-submenu">
                 <?php foreach($menuItem['subMenu'] as $subMenu) { ?>
-                <li class="nav-submenu-item">
+                <li class="nav-submenu-item <?= $key == 0 ? 'active': '' ?>">
                     <span class="submenu-bullet bg-<?= $menuItem['color'] ?>"></span>
                     <div><?= $subMenu['name'] ?></div>
                 </li>

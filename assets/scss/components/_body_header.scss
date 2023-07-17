@@ -4,6 +4,19 @@
   gap: 12px;
 }
 
+.box-sm {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.box-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .body-title {
   font-size: 18px;
   font-weight: 600;
@@ -17,7 +30,7 @@
 }
 
 .selected-chips {
-  background-color: $gray-300;
+  background-color: $gray-200;
   color: $black;
   font-size: 12px;
   padding: 2px 8px;

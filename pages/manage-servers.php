@@ -24,6 +24,7 @@
     <div id="myGrid" class="ag-theme-alpine"></div>
 </div>
 
+<?php include_once("../includes/delete-modal.php") ?>
 <?php include_once("../includes/footer.php") ?>
 
 <script>

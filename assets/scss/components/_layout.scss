@@ -66,7 +66,8 @@ aside.page-sider {
         border-radius: 6px;
         border: 1px solid transparent;
       }
-      &:hover {
+      &:hover,
+      &.active {
         .nav-item-content {
           color: $white;
           padding: 10px 12px;
@@ -82,6 +83,11 @@ aside.page-sider {
       &-chevron {
         font-size: 20px;
       }
+      &:not(.active) {
+        .nav-submenu {
+          display: none;
+        }
+      }
     }
 
     .nav-submenu {
@@ -91,7 +97,6 @@ aside.page-sider {
       list-style: none;
       color: antiquewhite;
       flex-direction: column;
-      display: none;
 
       &-item {
         font-size: 13px;
@@ -113,7 +118,8 @@ aside.page-sider {
           border-radius: 50%;
         }
 
-        &:hover {
+        &:hover,
+        &.active {
           color: $white;
         }
       }
@@ -176,5 +182,11 @@ aside.page-sider,
     &::-webkit-scrollbar-thumb {
       background-color: $gray-500;
     }
+  }
+}
+
+.selected-chips {
+  .ultralysis-icon {
+    cursor: pointer;
   }
 }

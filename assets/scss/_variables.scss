@@ -113,3 +113,13 @@ $form-switch-checked-color: $white;
 $form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4  8 8'><circle r='3.4' fill='#{$component-active-bg}'/></svg>");
 $form-switch-focus-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4  8 8'><circle r='3.4' fill='#{$component-active-bg}'/></svg>");
 $form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4  8 8'><circle r='3.4' fill='#{$form-switch-checked-color}'/></svg>");
+
+$modal-inner-padding: 0;
+
+$min-contrast-ratio: 3.1;
+
+$input-btn-padding-y: 8px;
+$input-btn-padding-x: 16px;
+
+$input-btn-font-size: 14px;
+$input-height: 40px;

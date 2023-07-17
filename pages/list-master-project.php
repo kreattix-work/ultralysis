@@ -2,11 +2,7 @@
 
 <div class="body-header">
     <div class="box">
-        <div class="body-title">List Company</div>
-        <span class="selected-chips">
-            <span>25 Selected</span>
-            <span class="ultralysis-icon" onclick="removeParent(this)">clear</span>
-        </span>
+        <div class="body-title">List Master Project</div>
     </div>
     <div class="body-actions">
         <span class="text-light">Change status of Selected :</span>

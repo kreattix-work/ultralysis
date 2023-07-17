@@ -126,3 +126,14 @@ document.addEventListener("click", function (event) {
     });
   }
 });
+
+function removeParent(element) {
+  element.parentElement.remove();
+}
+
+$(function () {
+  $("select").select2({
+    theme: "bootstrap-5",
+    minimumResultsForSearch: -1,
+  });
+});
