@@ -72,7 +72,7 @@
                     </div>
                     <div>
                         <label class="form-label">Client Form</label>
-                        <select class="form-select">
+                        <select class="form-select select2">
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
@@ -99,7 +99,7 @@
                 <div class="box-vertical">
                     <div>
                         <label class="form-label">Company</label>
-                        <select class="form-select">
+                        <select class="form-select select2">
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>

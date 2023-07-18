@@ -132,8 +132,20 @@ function removeParent(element) {
 }
 
 $(function () {
-  $("select").select2({
+  $(".select2").select2({
     theme: "bootstrap-5",
     minimumResultsForSearch: -1,
+  });
+
+  $(".select2-sm").select2({
+    theme: "bootstrap-5",
+    minimumResultsForSearch: -1,
+    templateResult: function (data, container) {
+      if (data.element) {
+        $(container).addClass("select2-sm-option");
+      }
+
+      return data.text;
+    },
   });
 });

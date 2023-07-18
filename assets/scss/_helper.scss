@@ -8,13 +8,21 @@
 }
 
 .w-100 {
-  width: 100%;
+  width: 100% !important;
 }
 
 .flex-1 {
-  flex: 1;
+  flex: 1 !important;
 }
 
 .h-100 {
-  height: 100%;
+  height: 100% !important;
+}
+
+.w-auto {
+  width: auto !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

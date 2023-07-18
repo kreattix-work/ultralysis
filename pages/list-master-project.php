@@ -39,14 +39,14 @@
 <div class="body-header">
     <div class="row flex-1">
         <div class="col">
-            <select class="form-select">
+            <select class="form-select select2">
                 <option value="1">All Server</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
             </select>
         </div>
         <div class="col">
-            <select class="form-select">
+            <select class="form-select select2">
                 <option value="1">All Project Type</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
@@ -90,7 +90,7 @@
                     </div>
                     <div>
                         <label class="form-label">Client Form</label>
-                        <select class="form-select">
+                        <select class="form-select select2">
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>
@@ -117,7 +117,7 @@
                 <div class="box-vertical">
                     <div>
                         <label class="form-label">Company</label>
-                        <select class="form-select">
+                        <select class="form-select select2">
                             <option value="1">One</option>
                             <option value="2">Two</option>
                             <option value="3">Three</option>

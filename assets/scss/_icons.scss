@@ -37,6 +37,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ultralysis-icon-right:before {
+  content: "\e91f";
+}
 .ultralysis-icon-checked-box:before {
   content: "\e91d";
 }

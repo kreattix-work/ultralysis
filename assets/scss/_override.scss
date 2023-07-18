@@ -25,8 +25,10 @@
 
 .form-select option {
   padding: 16px;
+  --bs-border-radius: 6px !important;
+  --bs-border-radius-sm: 6px !important;
 }
-.select2-container {
+.select2 + .select2-container {
   width: 100% !important;
 }
 
@@ -87,7 +89,7 @@ span.select2-dropdown {
   display: flex;
   align-items: center;
 
-  &:before {
+  &.select2:before {
     font-family: "ultralysis";
     content: "\e918";
     margin-right: 8px;
@@ -110,6 +112,27 @@ span.select2-dropdown {
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+.select2-dropdown:has(.select2-sm-option) {
+  padding: 8px !important;
+}
+.select2-sm-option {
+  font-size: 12px !important;
+}
+
+.form-select-sm + .select2-container .select2-selection__rendered {
+  padding-right: 4px !important;
+}
+
+.form-select-sm ~ .select2-container--bootstrap-5 .select2-selection--single {
+  padding: 5px 2px;
+}
+.form-select-sm ~ .select2-container--bootstrap-5 .select2-selection {
+  min-height: 30px;
+  height: 30px;
+  font-size: 12px;
+  background-color: $gray-200;
 }
 
 .form-label {

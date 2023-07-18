@@ -74,3 +74,30 @@
     height: 36px;
   }
 }
+
+.grid-footer {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid $border-color;
+  background-color: $gray-100;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gird-record-per-page {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.grid-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-pagination {
+  height: 24px;
+  width: 24px;
+  padding: 4px;
+}
