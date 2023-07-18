@@ -1,9 +1,7 @@
 <?php include_once("../includes/header.php") ?>
 
 <div class="body-header">
-    <div class="box">
-        <div class="body-title">List Master Project</div>
-    </div>
+    <div class="body-title">List Master Projects</div>
     <div class="body-actions">
         <span class="text-light">Change status of Selected :</span>
 
@@ -38,11 +36,78 @@
     </div>
 </div>
 
+<div class="body-header">
+    <div class="row flex-1">
+        <div class="col">
+            <select class="form-select">
+                <option value="1">All Server</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="col">
+            <select class="form-select">
+                <option value="1">All Project Type</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-success h-100 px-4">Fetch Project</button>
+        </div>
+    </div>
+</div>
+
+
+
 <div class="body-content">
     <div id="myGrid" class="ag-theme-alpine"></div>
 </div>
 
 <div class="modal fade" id="addModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Company</h5>
+            </div>
+            <div class="modal-body">
+                <div class="box-vertical">
+                    <div>
+                        <label class="form-label">Company :</label>
+                        <input class="form-control" placeholder="Company">
+                    </div>
+                    <div>
+                        <label class="form-label">Contact Person :</label>
+                        <input class="form-control" placeholder="Type here">
+                    </div>
+                    <div>
+                        <label class="form-label">Contact Person :</label>
+                        <input class="form-control" placeholder="Type here">
+                    </div>
+                    <div>
+                        <label class="form-label">Client Id :</label>
+                        <input class="form-control" placeholder="+88">
+                    </div>
+                    <div>
+                        <label class="form-label">Client Form</label>
+                        <select class="form-select">
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-lg btn-outline-light" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-lg btn-success">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="manageClientModal">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -96,6 +161,14 @@
 
 <?php include_once("../includes/delete-modal.php") ?>
 <?php include_once("../includes/footer.php") ?>
+
+<?php 
+    $actionOptions = [[
+        "name" => "Manage Client Ids",
+        "icon" => "add-category",
+        "attributes" => "data-bs-toggle=\"modal\" data-bs-target=\"#manageClientModal\""
+    ]];
+?>
 
 <script>
 class ActionRenderer {

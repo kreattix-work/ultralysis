@@ -15,10 +15,19 @@
                 <span class="ultralysis-icon">edit</span>
                 Edit
             </li>
-            <li>
-                <span class="ultralysis-icon">add-category</span>
-                Manage Client Ids
+            <?php if(isset($actionOptions)) { ?>
+            <?php foreach($actionOptions as $options) { ?>
+            <li <?= $options['attributes'] ?>>
+                <span class="ultralysis-icon"><?= $options['icon'] ?></span>
+                <?= $options['name'] ?>
             </li>
+            <?php } ?>
+            <?php } else { ?>
+            <li>
+                <span class="ultralysis-icon">add</span>
+                Other Options
+            </li>
+            <?php } ?>
         </ul>
     </div>
 </div>
