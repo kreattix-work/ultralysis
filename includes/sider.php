@@ -72,7 +72,7 @@
             "icon" => "node",
             "color" => "pink",
             "subMenu" => [
-                ["name" => "Admin Manager Config", "url" => "#"],
+                ["name" => "Admin Manager Config", "url" => ""],
                 ["name" => "Project Manager Config", "url" => "#"],
                 ["name" => "User Manager Config", "url" => "#"],
             ]
@@ -95,8 +95,10 @@
             <ul class="nav-submenu">
                 <?php foreach($menuItem['subMenu'] as $subMenu) { ?>
                 <li class="nav-submenu-item <?= $key == 0 ? 'active': '' ?>">
-                    <span class="submenu-bullet bg-<?= $menuItem['color'] ?>"></span>
-                    <div><?= $subMenu['name'] ?></div>
+                    <a href="<?= $subMenu['url'] ?>">
+                        <span class="submenu-bullet bg-<?= $menuItem['color'] ?>"></span>
+                        <div><?= $subMenu['name'] ?></div>
+                    </a>
                 </li>
                 <?php } ?>
             </ul>

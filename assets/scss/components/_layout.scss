@@ -107,6 +107,15 @@ aside.page-sider {
         gap: 12px;
         margin-top: 20px;
 
+        a {
+          font-size: 13px;
+          color: $nav-font-color;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          text-decoration: none;
+        }
+
         &:not(:hover, .active) {
           .submenu-bullet {
             background-color: $nav-font-color;
