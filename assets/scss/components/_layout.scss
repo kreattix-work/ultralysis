@@ -131,6 +131,9 @@ aside.page-sider {
         &:hover,
         &.active {
           color: $white;
+          a {
+            color: $white;
+          }
         }
       }
     }
