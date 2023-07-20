@@ -110,6 +110,9 @@ $form-switch-color: $gray-300;
 $form-switch-focus-color: $gray-300;
 $form-switch-checked-color: $white;
 
+$form-check-input-checked-color: $white;
+$form-check-radio-checked-color: $blue;
+$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-radio-checked-color}'/></svg>") !default;
 $form-switch-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4  8 8'><circle r='3.4' fill='#{$component-active-bg}'/></svg>");
 $form-switch-focus-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4  8 8'><circle r='3.4' fill='#{$component-active-bg}'/></svg>");
 $form-switch-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4  8 8'><circle r='3.4' fill='#{$form-switch-checked-color}'/></svg>");
@@ -124,3 +127,5 @@ $input-btn-padding-x: 16px;
 $input-border-color: $border-color;
 $input-btn-font-size: 14px;
 $input-height: 40px;
+
+$card-cap-bg: $white;

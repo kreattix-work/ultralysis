@@ -151,3 +151,82 @@ span.select2-dropdown {
   font-size: 14px;
   font-weight: 600;
 }
+
+.btn-outline-secondary {
+  --bs-btn-color: #{$gray-900};
+  --bs-btn-border-color: #{$border-color};
+  --bs-btn-bg: #{$gray-100};
+
+  &:hover {
+    --bs-btn-hover-color: #{$gray-900};
+    --bs-btn-hover-bg: #{$gray-400};
+    --bs-btn-hover-border-color: #{$gray-400};
+  }
+}
+
+.form-check-input[type="radio"] {
+  height: 1.5em;
+  width: 1.5em;
+  margin-right: 0.5em;
+  margin-top: 0;
+  cursor: pointer;
+  transition: $transition-base;
+
+  & + label {
+    transition: $transition-base;
+  }
+  &:checked {
+    background-color: transparent;
+    border-color: $gray-400;
+
+    & + label {
+      color: $blue;
+    }
+  }
+}
+div:not(.form-switch) {
+  & > .form-check-input[type="checkbox"] {
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: 0.5em;
+    margin-top: 0;
+    cursor: pointer;
+    transition: $transition-base;
+
+    & + label {
+      transition: $transition-base;
+    }
+    &:checked {
+      background-color: $blue;
+      border-color: $blue;
+
+      & + label {
+        color: $blue;
+      }
+    }
+  }
+}
+
+.form-switch {
+  .form-check-input[type="checkbox"] {
+    font-size: 16px;
+    margin-left: -2em;
+    height: 1.25em;
+    cursor: pointer;
+  }
+}
+
+.check-box-group {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  column-gap: 4px;
+}
+
+.card {
+  padding: 0px 16px;
+  --bs-card-spacer-y: 10px;
+  --bs-card-spacer-x: 0;
+  --bs-card-cap-padding-y: 10px;
+  --bs-card-cap-padding-x: 0;
+}

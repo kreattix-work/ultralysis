@@ -5,7 +5,9 @@
 </div>
 
 <div class="body-header">
-    <div></div>
+    <div>
+        <?php include_once("../includes/menu-tabs.php") ?>
+    </div>
     <div class="body-actions">
         <span class="text-light">Change status of Selected :</span>
 
@@ -44,33 +46,33 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Update Project Manager Sub-Menu Wizard</h5>
+                <h5 class="modal-title">Add New Menu</h5>
             </div>
             <div class="modal-body">
                 <div class="box-vertical">
                     <div>
-                        <label class="form-label">Menu Slug</label>
-                        <select class="form-select select2">
-                            <option value="1">Manage Template</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
+                        <label class="form-label">Menu Name</label>
+                        <input class="form-control" placeholder="Type here">
                     </div>
-
                     <div>
-                        <label class="form-label">Menu Slug</label>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                            <label class="form-check-label" for="inlineCheckbox1">1</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                            <label class="form-check-label" for="inlineCheckbox2">2</label>
+                        <label class="form-label">Rank</label>
+                        <input class="form-control" placeholder="Type here">
+                    </div>
+                    <div>
+                        <label class="form-label">Status</label>
+                        <div class="">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" checked type="radio" name="inlineRadioOptions"
+                                    id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Active</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                    value="option3">
+                                <label class="form-check-label" for="inlineRadio3">Deactive</label>
+                            </div>
                         </div>
                     </div>
-
-
-
                 </div>
 
             </div>
@@ -90,14 +92,7 @@ class ActionRenderer {
     init(params) {
         this.eGui = document.createElement('div');
         this.eGui.innerHTML = `
-            <div class="grid-actions">
-                <button class="btn-icon btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                    <span class="ultralysis-icon">delete</span>
-                </button>
-                <button class="btn-icon btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#addModal">
-                    <span class="ultralysis-icon">edit</span>
-                </button>
-            </div>
+            <?php include(BASEPATH.'includes/actions.php') ?>
         `;
     }
     getGui() {
@@ -132,14 +127,6 @@ const columnDefs = [{
         suppressSizeToFit: true,
     },
     {
-        headerName: "Sub Menu Name",
-        field: "sub_menu_name",
-    },
-    {
-        headerName: "Menu Slug",
-        field: "menu_slug",
-    },
-    {
         headerName: "Rank",
         field: "rank",
     },
@@ -164,10 +151,8 @@ const rowData = [];
 
 for (let i = 0; i <= 50; i++) {
     rowData.push({
-        menu_name: "User & Group",
-        sub_menu_name: "Users",
-        menu_slug: "Manage Template",
-        rank: "5",
+        menu_name: "Project Configuration",
+        rank: "N/A",
         status: false
     })
 }

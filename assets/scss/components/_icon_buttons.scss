@@ -61,12 +61,3 @@
 .btn-outline-danger {
   --bs-btn-border-color: #{$border-color};
 }
-
-.form-check-input {
-  height: 1.25em;
-  cursor: pointer;
-}
-.form-switch .form-check-input {
-  font-size: 16px;
-  margin-left: -2em;
-}
