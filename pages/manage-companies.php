@@ -27,7 +27,7 @@
                 </li>
             </ul>
         </div>
-        <button class="btn btn-outline-danger">
+        <button class="btn btn-outline-danger light-border">
             <span class="ultralysis-icon">delete</span>
             <span>Delete Selected</span>
         </button>

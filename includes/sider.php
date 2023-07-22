@@ -121,7 +121,7 @@
             </div>
         </li>
     </ul>
-    <button class="btn btn-lg btn-dark btn-block">
+    <button class="btn btn-lg btn-dark btn-block" data-bs-toggle="modal" data-bs-target="#logoutModal">
         <span class="ultralysis-icon">logout</span>
         <span>Logout</span>
     </button>
