@@ -232,6 +232,7 @@
         <span>Logout</span>
       </button>
     </aside>
+
     <div class="page-body">
       <div class="body-header">
         <div class="body-title">List Master Projects</div>
@@ -258,23 +259,25 @@
               </li>
             </ul>
           </div>
-          <button class="btn btn-outline-danger light-border">
-            <span class="ultralysis-icon">delete</span>
-            <span>Delete Selected</span>
-          </button>
-          <button class="btn btn-outline-light">
-            <span class="ultralysis-icon">upload-document</span>
-            <span>Export CSV</span>
-          </button>
-          <button class="btn btn-outline-light">
-            <span class="ultralysis-icon">add</span>
-            <span>Add</span>
-          </button>
+          <div class="inherit-space">
+            <button class="btn btn-outline-danger light-border">
+              <span class="ultralysis-icon">delete</span>
+              <span>Delete Selected</span>
+            </button>
+            <button class="btn btn-outline-light">
+              <span class="ultralysis-icon">upload-document</span>
+              <span>Export CSV</span>
+            </button>
+            <button class="btn btn-outline-light">
+              <span class="ultralysis-icon">add</span>
+              <span>Add</span>
+            </button>
+          </div>
         </div>
       </div>
 
-      <div class="body-header">
-        <div class="row flex-1">
+      <div class="body-header no-flex">
+        <div class="row flex-1 gy-2">
           <div class="col">
             <select class="form-select select2">
               <option value="1">All Server</option>
@@ -289,8 +292,8 @@
               <option value="3">Three</option>
             </select>
           </div>
-          <div class="col-auto">
-            <button class="btn btn-success h-100 px-4">Fetch Project</button>
+          <div class="col-sm-12 col-md-auto">
+            <button class="btn btn-success h-100 px-4 btn-block">Fetch Project</button>
           </div>
         </div>
       </div>
@@ -450,15 +453,16 @@
       field: "phone",
       cellRenderer: StatusRenderer,
       suppressSizeToFit: true,
+      minWidth: 80,
       width: 80,
     },
     {
       headerName: "Action",
-      type: "rightAligned",
       sortable: false,
       cellRenderer: ActionRenderer,
       suppressSizeToFit: true,
-      width: 120,
+      resizable: false,
+      maxWidth: 110,
     },
   ];
 
@@ -480,6 +484,9 @@
     columnDefs: columnDefs,
     defaultColDef: {
       sortable: true,
+      minWidth: 150,
+      resizable: true,
+      suppressMovable: true,
     },
     rowData: rowData,
     rowSelection: "multiple",

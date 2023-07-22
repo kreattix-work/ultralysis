@@ -63,7 +63,7 @@
 }
 
 @media (max-width: 1024px) {
-  .body-header {
+  .body-header:not(.no-flex) {
     flex-direction: column;
     align-items: flex-start;
   }

@@ -1,5 +1,5 @@
 
-.body-header {
+.body-header:not(.no-flex) {
   display: flex;
   gap: 12px;
   justify-content: space-between;
@@ -93,7 +93,7 @@
     border-bottom: 1px solid $border-color;
     width: 100%;
   }
-  .body-header {
+  .body-header:not(.no-flex) {
     flex-direction: column;
     align-items: flex-start;
   }

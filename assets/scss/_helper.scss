@@ -39,3 +39,9 @@
   flex-wrap: inherit;
   justify-content: inherit;
 }
+
+@media (max-width: 767px) {
+  .btn-block {
+    width: 100%;
+  }
+}
