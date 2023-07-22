@@ -56,19 +56,19 @@
                 <div class="box-vertical">
                     <div>
                         <label class="form-label">Company :</label>
-                        <input class="form-control" placeholder="Company">
+                        <input class="form-control" placeholder="Company" />
                     </div>
                     <div>
                         <label class="form-label">Contact Person :</label>
-                        <input class="form-control" placeholder="Type here">
+                        <input class="form-control" placeholder="Type here" />
                     </div>
                     <div>
-                        <label class="form-label">Contact Person :</label>
-                        <input class="form-control" placeholder="Type here">
+                        <label class="form-label">phone :</label>
+                        <input class="form-control" placeholder="+88" />
                     </div>
                     <div>
                         <label class="form-label">Client Id :</label>
-                        <input class="form-control" placeholder="+88">
+                        <input class="form-control" placeholder="Type here" />
                     </div>
                     <div>
                         <label class="form-label">Client Form</label>
@@ -79,11 +79,14 @@
                         </select>
                     </div>
                 </div>
-
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-lg btn-outline-light" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-lg btn-success">Save changes</button>
+                <button type="button" class="btn btn-lg btn-outline-light" data-bs-dismiss="modal">
+                    Close
+                </button>
+                <button type="button" class="btn btn-lg btn-success">
+                    Save changes
+                </button>
             </div>
         </div>
     </div>
@@ -144,46 +147,48 @@
 <?php include_once("../includes/delete-modal.php") ?>
 <?php include_once("../includes/footer.php") ?>
 
-<?php 
-    $actionOptions = [[
+<?php
+$actionOptions = [
+    [
         "name" => "Manage Client Ids",
         "icon" => "add-category",
         "attributes" => "data-bs-toggle=\"modal\" data-bs-target=\"#manageClientModal\""
-    ]];
+    ]
+];
 ?>
 
 <script>
-class ActionRenderer {
-    init(params) {
-        this.eGui = document.createElement('div');
-        this.eGui.innerHTML = `
-            <?php include(BASEPATH.'includes/actions.php') ?>
+    class ActionRenderer {
+        init(params) {
+            this.eGui = document.createElement('div');
+            this.eGui.innerHTML = `
+            <?php include(BASEPATH . 'includes/actions.php') ?>
         `;
+        }
+        getGui() {
+            return this.eGui;
+        }
+        refresh(params) {
+            return false;
+        }
     }
-    getGui() {
-        return this.eGui;
-    }
-    refresh(params) {
-        return false;
-    }
-}
-class StatusRenderer {
-    init(params) {
-        this.eGui = document.createElement('div');
-        this.eGui.innerHTML = `
+    class StatusRenderer {
+        init(params) {
+            this.eGui = document.createElement('div');
+            this.eGui.innerHTML = `
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox">
             </div>
         `;
+        }
+        getGui() {
+            return this.eGui;
+        }
+        refresh(params) {
+            return false;
+        }
     }
-    getGui() {
-        return this.eGui;
-    }
-    refresh(params) {
-        return false;
-    }
-}
-const columnDefs = [{
+    const columnDefs = [{
         headerName: "Server ID",
         field: "server_id",
         headerCheckboxSelection: true,
@@ -226,37 +231,37 @@ const columnDefs = [{
         suppressSizeToFit: true,
         width: 120
     }
-];
+    ];
 
-const rowData = [];
+    const rowData = [];
 
-for (let i = 0; i <= 50; i++) {
-    rowData.push({
-        server_id: "29",
-        company_name: "AB World Foods",
-        client_id: 'Red Bull (29)',
-        country: 'UK',
-        city: 'FOXS',
-        phone: "9998889998",
-        status: false
-    })
-}
+    for (let i = 0; i <= 50; i++) {
+        rowData.push({
+            server_id: "29",
+            company_name: "AB World Foods",
+            client_id: 'Red Bull (29)',
+            country: 'UK',
+            city: 'FOXS',
+            phone: "9998889998",
+            status: false
+        })
+    }
 
 
 
-const gridOptions = {
-    columnDefs: columnDefs,
-    defaultColDef: {
-        sortable: true
-    },
-    rowData: rowData,
-    rowSelection: 'multiple',
-    suppressRowClickSelection: true,
-};
+    const gridOptions = {
+        columnDefs: columnDefs,
+        defaultColDef: {
+            sortable: true
+        },
+        rowData: rowData,
+        rowSelection: 'multiple',
+        suppressRowClickSelection: true,
+    };
 
-document.addEventListener('DOMContentLoaded', function() {
-    const gridDiv = document.querySelector('#myGrid');
-    const grid = new agGrid.Grid(gridDiv, gridOptions);
-    grid.gridOptions.api.sizeColumnsToFit()
-});
+    document.addEventListener('DOMContentLoaded', function () {
+        const gridDiv = document.querySelector('#myGrid');
+        const grid = new agGrid.Grid(gridDiv, gridOptions);
+        grid.gridOptions.api.sizeColumnsToFit()
+    });
 </script>

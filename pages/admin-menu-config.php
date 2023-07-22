@@ -21,7 +21,7 @@ class ActionRenderer {
         const isEven = params.rowIndex % 2 === 0
         if (isEven) {
             this.eGui.innerHTML = `
-                <button class="btn btn-success btn-sm mt-1">
+                <button class="btn btn-success btn-sm mt-1" onclick="window.location.href = 'admin-menu-matrix.html'">
                     <span class="ultralysis-icon">rule</span>
                     <span>Manage Permission</span>
                 </button>

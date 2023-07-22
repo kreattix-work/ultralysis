@@ -8,17 +8,14 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
     />
-    <link rel="stylesheet" href="../assets/css/ultrasysis.min.css?1690010606" />
+    <link rel="stylesheet" href="./assets/css/ultrasysis.min.css?1690016352" />
   </head>
 
   <body>
     <header class="page-header">
       <div class="header-heading-block">
         <a href="javascript:void(0);" class="header-logo">
-          <img
-            src="http://localhost/ultralysis/assets/images/logo.png"
-            alt="header-logo"
-          />
+          <img src="./assets/images/logo.png" alt="header-logo" />
         </a>
         <button
           class="sider-toggler btn-icon-sm btn btn-outline-light"
@@ -49,14 +46,14 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <div class="nav-item-content" onclick="toggleMenu(this)">
             <span class="ultralysis-icon nav-item-icon text-blue"> chart </span>
             <div class="nav-item-text">Manage Companies</div>
             <span class="ultralysis-icon nav-item-chevron">down</span>
           </div>
           <ul class="nav-submenu">
-            <li class="nav-submenu-item active">
+            <li class="nav-submenu-item">
               <a href="manage-company.html">
                 <span class="submenu-bullet bg-blue"></span>
                 <div>List Companies</div>
@@ -180,7 +177,7 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <div class="nav-item-content" onclick="toggleMenu(this)">
             <span class="ultralysis-icon nav-item-icon text-pink"> node </span>
             <div class="nav-item-text">Menu Configuration</div>
@@ -193,7 +190,7 @@
                 <div>Admin Manager Config</div>
               </a>
             </li>
-            <li class="nav-submenu-item">
+            <li class="nav-submenu-item active">
               <a href="project-menu-config.html">
                 <span class="submenu-bullet bg-pink"></span>
                 <div>Project Manager Config</div>
@@ -232,16 +229,41 @@
         <span>Logout</span>
       </button>
     </aside>
+
     <div class="page-body">
       <div class="body-header">
-        <div class="box">
-          <div class="body-title">List Company</div>
-          <span class="selected-chips">
-            <span>25 Selected</span>
-            <span class="ultralysis-icon" onclick="removeParent(this)"
-              >clear</span
+        <div class="body-title">Project Manager Menu Configuration</div>
+      </div>
+
+      <div class="body-header">
+        <div>
+          <div
+            class="btn-group"
+            role="group"
+            aria-label="Basic outlined example"
+          >
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              onclick="window.location.href = 'project-menu-config.html';"
             >
-          </span>
+              Menu Creation
+            </button>
+            <button
+              type="button"
+              class="btn btn-success"
+              onclick="window.location.href = 'project-submenu-config.html';"
+            >
+              Sub Menu Creator
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              onclick="window.location.href = 'project-menu-permission.html';"
+            >
+              Menu Permission
+            </button>
+          </div>
         </div>
         <div class="body-actions">
           <span class="text-light">Change status of Selected :</span>
@@ -266,126 +288,178 @@
               </li>
             </ul>
           </div>
-          <button class="btn btn-outline-danger light-border">
-            <span class="ultralysis-icon">delete</span>
-            <span>Delete Selected</span>
-          </button>
-          <button class="btn btn-outline-light">
-            <span class="ultralysis-icon">upload-document</span>
-            <span>Export CSV</span>
-          </button>
+          <button class="btn btn-success">Update</button>
           <button
             class="btn btn-outline-light"
             data-bs-toggle="modal"
             data-bs-target="#addModal"
           >
             <span class="ultralysis-icon">add</span>
-            <span>Add</span>
+            <span>Add New Record</span>
           </button>
         </div>
       </div>
 
       <div class="body-content">
         <div id="myGrid" class="ag-theme-alpine"></div>
+        <div class="grid-footer">
+          <div class="gird-record-per-page">
+            <select class="form-select form-select-sm select2-sm w-auto">
+              <option value="25">25</option>
+              <option value="25">50</option>
+              <option value="25">100</option>
+            </select>
+            <span>Items showing per page</span>
+          </div>
+          <div class="grid-pagination">
+            <button
+              class="btn btn-sm btn-outline-light btn-pagination"
+              disabled
+            >
+              <span class="ultralysis-icon">left</span>
+            </button>
+            <button class="btn btn-sm btn-outline-light btn-pagination active">
+              1
+            </button>
+            <button class="btn btn-sm btn-outline-light btn-pagination">
+              2
+            </button>
+            <button class="btn btn-sm btn-outline-light btn-pagination">
+              3
+            </button>
+            <button class="btn btn-sm btn-outline-light btn-pagination">
+              <span class="ultralysis-icon">right</span>
+            </button>
+          </div>
+        </div>
       </div>
 
       <div class="modal fade" id="addModal">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Add Company</h5>
+              <h5 class="modal-title">
+                Update Project Manager Sub-Menu Wizard
+              </h5>
             </div>
             <div class="modal-body">
               <div class="box-vertical">
                 <div>
-                  <label class="form-label">Company :</label>
-                  <input class="form-control" placeholder="Company" />
-                </div>
-                <div>
-                  <label class="form-label">Contact Person :</label>
-                  <input class="form-control" placeholder="Type here" />
-                </div>
-                <div>
-                    <label class="form-label">phone :</label>
-                    <input class="form-control" placeholder="+88" />
-                  </div>
-                <div>
-                  <label class="form-label">Client Id :</label>
-                  <input class="form-control" placeholder="Type here" />
-                </div>
-                <div>
-                  <label class="form-label">Client Form</label>
+                  <label class="form-label">Menu Slug</label>
                   <select class="form-select select2">
-                    <option value="1">One</option>
+                    <option value="1">Manage Template</option>
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                   </select>
                 </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-lg btn-outline-light"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-lg btn-success">
-                Save changes
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="modal fade" id="manageClientModal">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Manage Client Id’s</h5>
-            </div>
-            <div class="modal-body">
-              <div class="box-vertical">
                 <div>
-                  <label class="form-label">Company</label>
-                  <select class="form-select select2">
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-                <div>
-                  <label class="form-label">Client Id</label>
-                  <input class="form-control" placeholder="Client Id" />
-                </div>
-                <div>
-                  <label class="form-label">Assigned Client Id’s</label>
-                  <div class="box-sm">
-                    <span class="selected-chips">
-                      <span>Client Id</span>
-                      <span class="ultralysis-icon" onclick="removeParent(this)"
-                        >clear</span
-                      >
-                    </span>
-                    <span class="selected-chips">
-                      <span>Client Id</span>
-                      <span class="ultralysis-icon" onclick="removeParent(this)"
-                        >clear</span
-                      >
-                    </span>
-                    <span class="selected-chips">
-                      <span>Client Id</span>
-                      <span class="ultralysis-icon" onclick="removeParent(this)"
-                        >clear</span
-                      >
-                    </span>
-                    <span class="selected-chips">
-                      <span>Client Id</span>
-                      <span class="ultralysis-icon" onclick="removeParent(this)"
-                        >clear</span
-                      >
-                    </span>
+                  <label class="form-label">Project Type List</label>
+                  <div class="card">
+                    <div class="card-header">Filter by Project</div>
+                    <div class="card-body check-box-group">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1"
+                          >Flex Project</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox2"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox2"
+                          >Dynamic Data Builder</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox3"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox3"
+                          >Daily Report</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox4"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox4"
+                          >Sales out</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox5"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox5"
+                          >Data Download</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox6"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox6"
+                          >Others</label
+                        >
+                      </div>
+
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox7"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox7"
+                          >Retailer</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox8"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox8"
+                          >Mobile App</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox9"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox9"
+                          >Manager</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox10"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox10"
+                          >Uploader</label
+                        >
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -398,9 +472,7 @@
               >
                 Close
               </button>
-              <button type="button" class="btn btn-lg btn-success">
-                Save changes
-              </button>
+              <button type="button" class="btn btn-lg btn-success">Save</button>
             </div>
           </div>
         </div>
@@ -464,41 +536,27 @@
 
 <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script>
 
-<script src="http://localhost/ultralysis/assets/js/jquery.min.js"></script>
-<script src="http://localhost/ultralysis/assets/js/popper.min.js"></script>
-<script src="http://localhost/ultralysis/assets/js/bootstrap.min.js"></script>
-<script src="http://localhost/ultralysis/assets/js/select2.full.min.js"></script>
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/select2.full.min.js"></script>
 
-<script src="http://localhost/ultralysis/assets/js/scripts.js?1690010606"></script>
+<script src="./assets/js/scripts.js?1690016352"></script>
 
 <script>
   class ActionRenderer {
     init(params) {
       this.eGui = document.createElement("div");
       this.eGui.innerHTML = `
-            <div class="grid-actions">
-    <button class="btn-icon btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#deleteModal">
-        <span class="ultralysis-icon">delete</span>
-    </button>
-    <div>
-        <button class="btn-icon btn btn-outline-light dropdown-menu-toggle" onclick="dropdownMenu(this)">
-            <span class="ultralysis-icon">more</span>
-        </button>
-        <ul class="dropdown-menu">
-            <li data-bs-toggle="modal" data-bs-target="#deleteModal">
-                <span class="ultralysis-icon">delete</span>
-                Delete
-            </li>
-            <li>
-                <span class="ultralysis-icon">edit</span>
-                Edit
-            </li>
-                                    <li data-bs-toggle="modal" data-bs-target="#manageClientModal">
-                <span class="ultralysis-icon">add-category</span>
-                Manage Client Ids            </li>
-                                </ul>
-    </div>
-</div>        `;
+                <div class="grid-actions">
+                    <button class="btn-icon btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                        <span class="ultralysis-icon">delete</span>
+                    </button>
+                    <button class="btn-icon btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#addModal">
+                        <span class="ultralysis-icon">edit</span>
+                    </button>
+                </div>
+            `;
     }
     getGui() {
       return this.eGui;
@@ -511,10 +569,10 @@
     init(params) {
       this.eGui = document.createElement("div");
       this.eGui.innerHTML = `
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox">
-            </div>
-        `;
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox">
+                </div>
+            `;
     }
     getGui() {
       return this.eGui;
@@ -525,32 +583,24 @@
   }
   const columnDefs = [
     {
-      headerName: "Server ID",
-      field: "server_id",
+      headerName: "Menu Name",
+      field: "menu_name",
       headerCheckboxSelection: true,
       checkboxSelection: true,
-    },
-    {
-      headerName: "Company Name",
-      field: "company_name",
       flex: 1,
       suppressSizeToFit: true,
     },
     {
-      headerName: "Client ID",
-      field: "client_id",
+      headerName: "Sub Menu Name",
+      field: "sub_menu_name",
     },
     {
-      headerName: "Country",
-      field: "country",
+      headerName: "Menu Slug",
+      field: "menu_slug",
     },
     {
-      headerName: "City",
-      field: "city",
-    },
-    {
-      headerName: "Phone",
-      field: "phone",
+      headerName: "Rank",
+      field: "rank",
     },
     {
       headerName: "Status",
@@ -573,16 +623,13 @@
 
   for (let i = 0; i <= 50; i++) {
     rowData.push({
-      server_id: "29",
-      company_name: "AB World Foods",
-      client_id: "Red Bull (29)",
-      country: "UK",
-      city: "FOXS",
-      phone: "9998889998",
+      menu_name: "User & Group",
+      sub_menu_name: "Users",
+      menu_slug: "Manage Template",
+      rank: "5",
       status: false,
     });
   }
-
   const gridOptions = {
     columnDefs: columnDefs,
     defaultColDef: {

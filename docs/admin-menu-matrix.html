@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
     />
-    <link rel="stylesheet" href="../assets/css/ultrasysis.min.css?1690010606" />
+    <link rel="stylesheet" href="./assets/css/ultrasysis.min.css?1690016072" />
   </head>
 
   <body>
@@ -16,7 +16,7 @@
       <div class="header-heading-block">
         <a href="javascript:void(0);" class="header-logo">
           <img
-            src="http://localhost/ultralysis/assets/images/logo.png"
+            src="./assets/images/logo.png"
             alt="header-logo"
           />
         </a>
@@ -32,7 +32,7 @@
 
     <aside class="page-sider">
       <ul class="sider-nav">
-        <li class="nav-item">
+        <li class="nav-item active">
           <div class="nav-item-content" onclick="toggleMenu(this)">
             <span class="ultralysis-icon nav-item-icon text-green">
               category
@@ -41,7 +41,7 @@
             <span class="ultralysis-icon nav-item-chevron">down</span>
           </div>
           <ul class="nav-submenu">
-            <li class="nav-submenu-item">
+            <li class="nav-submenu-item active">
               <a href="manage-server.html">
                 <span class="submenu-bullet bg-green"></span>
                 <div>List Server</div>
@@ -49,14 +49,14 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <div class="nav-item-content" onclick="toggleMenu(this)">
             <span class="ultralysis-icon nav-item-icon text-blue"> chart </span>
             <div class="nav-item-text">Manage Companies</div>
             <span class="ultralysis-icon nav-item-chevron">down</span>
           </div>
           <ul class="nav-submenu">
-            <li class="nav-submenu-item active">
+            <li class="nav-submenu-item">
               <a href="manage-company.html">
                 <span class="submenu-bullet bg-blue"></span>
                 <div>List Companies</div>
@@ -232,204 +232,72 @@
         <span>Logout</span>
       </button>
     </aside>
+
     <div class="page-body">
+      <div class="body-header fixed-to-header">
+        <div class="box">
+          <div
+            class="body-title cursor-pointer"
+            onclick="window.location.href = 'admin-menu-config.html'"
+          >
+            <div class="box">
+              <span class="ultralysis-icon icon-lg">arrow-left</span>
+              <span>Update Permission Matrix</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="body-header">
         <div class="box">
-          <div class="body-title">List Company</div>
-          <span class="selected-chips">
-            <span>25 Selected</span>
-            <span class="ultralysis-icon" onclick="removeParent(this)"
-              >clear</span
-            >
-          </span>
+          <div class="body-subtitle">
+            <div class="box no-gap">
+              <span>Admin Credential Matrix for Manage Servers</span>
+              <span class="ultralysis-icon icon-lg">chevron-right</span>
+              <span>List Servers</span>
+            </div>
+          </div>
         </div>
         <div class="body-actions">
-          <span class="text-light">Change status of Selected :</span>
-
-          <div>
-            <button
-              class="btn btn-outline-light dropdown-menu-toggle"
-              placement="bottom"
-              onclick="dropdownMenu(this)"
-            >
-              <span class="ultralysis-icon">down</span>
-              <span>Select</span>
-            </button>
-            <ul class="dropdown-menu">
-              <li>
-                <span class="ultralysis-icon">tick-circle</span>
-                Enable
-              </li>
-              <li>
-                <span class="ultralysis-icon">minus-circle</span>
-                Disable
-              </li>
-            </ul>
-          </div>
-          <button class="btn btn-outline-danger light-border">
-            <span class="ultralysis-icon">delete</span>
-            <span>Delete Selected</span>
-          </button>
-          <button class="btn btn-outline-light">
-            <span class="ultralysis-icon">upload-document</span>
-            <span>Export CSV</span>
-          </button>
-          <button
-            class="btn btn-outline-light"
-            data-bs-toggle="modal"
-            data-bs-target="#addModal"
-          >
-            <span class="ultralysis-icon">add</span>
-            <span>Add</span>
-          </button>
+          <button class="btn btn-success">Update</button>
+          <button class="btn btn-danger" onclick="window.location.href = 'admin-menu-config.html'">Cancel</button>
         </div>
       </div>
 
       <div class="body-content">
         <div id="myGrid" class="ag-theme-alpine"></div>
-      </div>
-
-      <div class="modal fade" id="addModal">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Add Company</h5>
-            </div>
-            <div class="modal-body">
-              <div class="box-vertical">
-                <div>
-                  <label class="form-label">Company :</label>
-                  <input class="form-control" placeholder="Company" />
-                </div>
-                <div>
-                  <label class="form-label">Contact Person :</label>
-                  <input class="form-control" placeholder="Type here" />
-                </div>
-                <div>
-                    <label class="form-label">phone :</label>
-                    <input class="form-control" placeholder="+88" />
-                  </div>
-                <div>
-                  <label class="form-label">Client Id :</label>
-                  <input class="form-control" placeholder="Type here" />
-                </div>
-                <div>
-                  <label class="form-label">Client Form</label>
-                  <select class="form-select select2">
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-lg btn-outline-light"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-lg btn-success">
-                Save changes
-              </button>
-            </div>
+        <div class="grid-footer">
+          <div class="gird-record-per-page">
+            <select class="form-select form-select-sm select2-sm w-auto">
+              <option value="25">25</option>
+              <option value="25">50</option>
+              <option value="25">100</option>
+            </select>
+            <span>Items showing per page</span>
+          </div>
+          <div class="grid-pagination">
+            <button
+              class="btn btn-sm btn-outline-light btn-pagination"
+              disabled
+            >
+              <span class="ultralysis-icon">left</span>
+            </button>
+            <button class="btn btn-sm btn-outline-light btn-pagination active">
+              1
+            </button>
+            <button class="btn btn-sm btn-outline-light btn-pagination">
+              2
+            </button>
+            <button class="btn btn-sm btn-outline-light btn-pagination">
+              3
+            </button>
+            <button class="btn btn-sm btn-outline-light btn-pagination">
+              <span class="ultralysis-icon">right</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <div class="modal fade" id="manageClientModal">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Manage Client Id’s</h5>
-            </div>
-            <div class="modal-body">
-              <div class="box-vertical">
-                <div>
-                  <label class="form-label">Company</label>
-                  <select class="form-select select2">
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                </div>
-                <div>
-                  <label class="form-label">Client Id</label>
-                  <input class="form-control" placeholder="Client Id" />
-                </div>
-                <div>
-                  <label class="form-label">Assigned Client Id’s</label>
-                  <div class="box-sm">
-                    <span class="selected-chips">
-                      <span>Client Id</span>
-                      <span class="ultralysis-icon" onclick="removeParent(this)"
-                        >clear</span
-                      >
-                    </span>
-                    <span class="selected-chips">
-                      <span>Client Id</span>
-                      <span class="ultralysis-icon" onclick="removeParent(this)"
-                        >clear</span
-                      >
-                    </span>
-                    <span class="selected-chips">
-                      <span>Client Id</span>
-                      <span class="ultralysis-icon" onclick="removeParent(this)"
-                        >clear</span
-                      >
-                    </span>
-                    <span class="selected-chips">
-                      <span>Client Id</span>
-                      <span class="ultralysis-icon" onclick="removeParent(this)"
-                        >clear</span
-                      >
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-lg btn-outline-light"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-lg btn-success">
-                Save changes
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal fade" id="deleteModal">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
-              <div class="warning-title">Warning !</div>
-              <div class="warning-text">
-                Are you sure you want to delete this company?
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-lg btn-outline-light px-4"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-lg btn-danger px-4">
-                Delete
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="modal fade" id="logoutModal">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -464,41 +332,29 @@
 
 <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script>
 
-<script src="http://localhost/ultralysis/assets/js/jquery.min.js"></script>
-<script src="http://localhost/ultralysis/assets/js/popper.min.js"></script>
-<script src="http://localhost/ultralysis/assets/js/bootstrap.min.js"></script>
-<script src="http://localhost/ultralysis/assets/js/select2.full.min.js"></script>
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/select2.full.min.js"></script>
 
-<script src="http://localhost/ultralysis/assets/js/scripts.js?1690010606"></script>
+<script src="./assets/js/scripts.js?1690016072"></script>
 
 <script>
   class ActionRenderer {
     init(params) {
+      console.log(params);
       this.eGui = document.createElement("div");
-      this.eGui.innerHTML = `
-            <div class="grid-actions">
-    <button class="btn-icon btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#deleteModal">
-        <span class="ultralysis-icon">delete</span>
-    </button>
-    <div>
-        <button class="btn-icon btn btn-outline-light dropdown-menu-toggle" onclick="dropdownMenu(this)">
-            <span class="ultralysis-icon">more</span>
-        </button>
-        <ul class="dropdown-menu">
-            <li data-bs-toggle="modal" data-bs-target="#deleteModal">
-                <span class="ultralysis-icon">delete</span>
-                Delete
-            </li>
-            <li>
-                <span class="ultralysis-icon">edit</span>
-                Edit
-            </li>
-                                    <li data-bs-toggle="modal" data-bs-target="#manageClientModal">
-                <span class="ultralysis-icon">add-category</span>
-                Manage Client Ids            </li>
-                                </ul>
-    </div>
-</div>        `;
+      const isEven = params.rowIndex % 2 === 0;
+      if (isEven) {
+        this.eGui.innerHTML = `
+                <button class="btn btn-success btn-sm mt-1">
+                    <span class="ultralysis-icon">rule</span>
+                    <span>Manage Permission</span>
+                </button>
+            `;
+      } else {
+        this.eGui.innerHTML = `<div class="text-start">N/A</div>`;
+      }
     }
     getGui() {
       return this.eGui;
@@ -525,47 +381,55 @@
   }
   const columnDefs = [
     {
-      headerName: "Server ID",
-      field: "server_id",
-      headerCheckboxSelection: true,
-      checkboxSelection: true,
-    },
-    {
-      headerName: "Company Name",
-      field: "company_name",
+      headerName: "Name",
+      field: "name",
       flex: 1,
       suppressSizeToFit: true,
     },
     {
-      headerName: "Client ID",
-      field: "client_id",
+      headerName: "Email",
+      field: "email",
+      flex: 1,
+      suppressSizeToFit: true,
     },
     {
-      headerName: "Country",
-      field: "country",
+      headerName: "Admin Id",
+      field: "admin_id",
+      width: 250,
     },
     {
-      headerName: "City",
-      field: "city",
+      headerName: "User Type",
+      field: "user_type",
     },
     {
-      headerName: "Phone",
-      field: "phone",
-    },
-    {
-      headerName: "Status",
-      field: "phone",
+      headerName: "All",
+      field: "all",
       cellRenderer: StatusRenderer,
-      suppressSizeToFit: true,
-      width: 80,
+      sortable: false,
     },
     {
-      headerName: "Action",
-      type: "rightAligned",
+      headerName: "List",
+      field: "list",
+      cellRenderer: StatusRenderer,
       sortable: false,
-      cellRenderer: ActionRenderer,
-      suppressSizeToFit: true,
-      width: 120,
+    },
+    {
+      headerName: "Add",
+      field: "add",
+      cellRenderer: StatusRenderer,
+      sortable: false,
+    },
+    {
+      headerName: "Edit",
+      field: "edit",
+      cellRenderer: StatusRenderer,
+      sortable: false,
+    },
+    {
+      headerName: "Delete",
+      field: "delete",
+      cellRenderer: StatusRenderer,
+      sortable: false,
     },
   ];
 
@@ -573,13 +437,10 @@
 
   for (let i = 0; i <= 50; i++) {
     rowData.push({
-      server_id: "29",
-      company_name: "AB World Foods",
-      client_id: "Red Bull (29)",
-      country: "UK",
-      city: "FOXS",
-      phone: "9998889998",
-      status: false,
+      name: "Manage Servers",
+      email: "example@domain.com",
+      admin_id: "Admin Name",
+      user_type: "Admin",
     });
   }
 

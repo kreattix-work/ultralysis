@@ -29,7 +29,7 @@
             <span class="ultralysis-icon">upload-document</span>
             <span>Export CSV</span>
         </button>
-        <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#addModal">
+        <button class="btn btn-outline-light">
             <span class="ultralysis-icon">add</span>
             <span>Add</span>
         </button>
@@ -64,111 +64,8 @@
     <div id="myGrid" class="ag-theme-alpine"></div>
 </div>
 
-<div class="modal fade" id="addModal">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Add Company</h5>
-            </div>
-            <div class="modal-body">
-                <div class="box-vertical">
-                    <div>
-                        <label class="form-label">Company :</label>
-                        <input class="form-control" placeholder="Company">
-                    </div>
-                    <div>
-                        <label class="form-label">Contact Person :</label>
-                        <input class="form-control" placeholder="Type here">
-                    </div>
-                    <div>
-                        <label class="form-label">Contact Person :</label>
-                        <input class="form-control" placeholder="Type here">
-                    </div>
-                    <div>
-                        <label class="form-label">Client Id :</label>
-                        <input class="form-control" placeholder="+88">
-                    </div>
-                    <div>
-                        <label class="form-label">Client Form</label>
-                        <select class="form-select select2">
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-lg btn-outline-light" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-lg btn-success">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="manageClientModal">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Manage Client Id’s</h5>
-            </div>
-            <div class="modal-body">
-                <div class="box-vertical">
-                    <div>
-                        <label class="form-label">Company</label>
-                        <select class="form-select select2">
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="form-label">Client Id</label>
-                        <input class="form-control" placeholder="Client Id">
-                    </div>
-                    <div>
-                        <label class="form-label">Assigned Client Id’s</label>
-                        <div class="box-sm">
-                            <span class="selected-chips">
-                                <span>Client Id</span>
-                                <span class="ultralysis-icon" onclick="removeParent(this)">clear</span>
-                            </span>
-                            <span class="selected-chips">
-                                <span>Client Id</span>
-                                <span class="ultralysis-icon" onclick="removeParent(this)">clear</span>
-                            </span>
-                            <span class="selected-chips">
-                                <span>Client Id</span>
-                                <span class="ultralysis-icon" onclick="removeParent(this)">clear</span>
-                            </span>
-                            <span class="selected-chips">
-                                <span>Client Id</span>
-                                <span class="ultralysis-icon" onclick="removeParent(this)">clear</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-lg btn-outline-light" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-lg btn-success">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 <?php include_once("../includes/delete-modal.php") ?>
 <?php include_once("../includes/footer.php") ?>
-
-<?php 
-    $actionOptions = [[
-        "name" => "Manage Client Ids",
-        "icon" => "add-category",
-        "attributes" => "data-bs-toggle=\"modal\" data-bs-target=\"#manageClientModal\""
-    ]];
-?>
 
 <script>
 class ActionRenderer {
