@@ -13,7 +13,7 @@
     <header class="page-header">
         <div class="header-heading-block">
             <a href="javascript:void(0);" class="header-logo">
-                <img src="<?= ASSETS_URL.'/images/logo.png' ?>" alt="header-logo">
+                <img src="<?= ASSETS_URL.'images/logo.png' ?>" alt="header-logo">
             </a>
             <button class="sider-toggler btn-icon-sm btn btn-outline-light" onclick="toggleSider()">
                 <span class="ultralysis-icon">left</span>
