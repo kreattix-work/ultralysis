@@ -61,3 +61,10 @@
 .btn-outline-danger.light-border {
   --bs-btn-border-color: #{$border-color};
 }
+
+@media (max-width: 1024px) {
+  .body-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

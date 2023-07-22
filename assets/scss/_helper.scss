@@ -30,3 +30,10 @@
 .font-bold {
   font-weight: 600;
 }
+
+.inherit-space {
+  display: inherit;
+  gap: inherit;
+  align-items: inherit;
+  flex-direction: inherit;
+}

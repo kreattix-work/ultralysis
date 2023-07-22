@@ -45,6 +45,7 @@ aside.page-sider {
   gap: 50px;
   font-size: 13px;
   color: $nav-font-color;
+  z-index: 10;
 
   .sider-nav {
     display: flex;
@@ -150,19 +151,6 @@ aside.page-sider {
   flex-direction: column;
   gap: 12px;
   transition: $transition-base;
-
-  .body-header {
-    display: flex;
-    gap: 12px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .body-content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
 }
 
 body.close-sider {
@@ -201,8 +189,41 @@ aside.page-sider,
   }
 }
 
-.selected-chips {
-  .ultralysis-icon {
-    cursor: pointer;
+
+@media (max-width: 1024px) {
+  .page-sider {
+    transform: translateX($sider-width * -1);
+  }
+  .page-body{
+    margin-left: 0;
+  }
+  .sider-toggler {
+    transform: rotate(-180deg);
+  }
+
+  body.open-sider {
+    .sider-toggler {
+      transform: rotate(0deg);
+    }
+    .page-sider {
+      transform: translateX(0);
+    }
+    .page-body {
+      margin-left: $sider-width;
+    }
+  }
+}
+
+@media (max-width: 767px) { 
+  html, body {
+    overflow: hidden;
+  }
+  .page-body {
+    min-width: 100%;
+    overflow: hidden;
+  }
+  body.open-sider .page-body {
+    transform: scale(0.8);
+    transform-origin: center left;
   }
 }

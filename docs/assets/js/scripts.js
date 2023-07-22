@@ -1,7 +1,14 @@
 const body = document.querySelector("body");
 
 function toggleSider() {
-  body.classList.toggle("close-sider");
+    if(window.innerWidth  <= 1024) {
+      body.classList.remove("close-sider");
+      body.classList.toggle("open-sider");
+    }else{
+      body.classList.remove("open-sider");
+      body.classList.toggle("close-sider");
+    }
+
 }
 
 function slideDown(element, duration = 250) {
@@ -79,9 +86,7 @@ function positionDropdown(element, dropdown) {
   if (element.getAttribute("placement") === "bottom") {
     dropdown.style.top = rectElement.bottom + 8 + "px";
     dropdown.style.left =
-      rectElement.left -
-      Math.abs(rectElement.width - rectDropdown.width) / 2 +
-      "px";
+      rectElement.left - Math.abs(rectElement.width - rectDropdown.width) / 2 + "px";
   } else {
     dropdown.style.top = rectElement.top + "px";
     dropdown.style.left = rectElement.left - rectDropdown.width - 8 + "px";
