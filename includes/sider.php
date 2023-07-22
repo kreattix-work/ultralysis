@@ -5,7 +5,7 @@
             "icon" => "category",
             "color" => "green",
             "subMenu" => [
-                ["name" => "List Server", "url" => "#"],
+                ["name" => "List Server", "url" => "manage-server.html"],
             ]
         ],
         [
@@ -13,7 +13,7 @@
             "icon" => "chart",
             "color" => "blue",
             "subMenu" => [
-                ["name" => "List Companies", "url" => "#"],
+                ["name" => "List Companies", "url" => "manage-company.html"],
             ]
         ],
         [
@@ -21,7 +21,7 @@
             "icon" => "align-left",
             "color" => "purple",
             "subMenu" => [
-                ["name" => "List Manage Project", "url" => "#"],
+                ["name" => "List Manage Project", "url" => "manage-project.html"],
                 ["name" => "List Project", "url" => "#"],
                 ["name" => "Assign Project", "url" => "#"],
                 ["name" => "List Project Type", "url" => "#"],
@@ -72,9 +72,9 @@
             "icon" => "node",
             "color" => "pink",
             "subMenu" => [
-                ["name" => "Admin Manager Config", "url" => ""],
-                ["name" => "Project Manager Config", "url" => "#"],
-                ["name" => "User Manager Config", "url" => "#"],
+                ["name" => "Admin Manager Config", "url" => "admin-menu-config.html"],
+                ["name" => "Project Manager Config", "url" => "project-menu-config.html"],
+                ["name" => "User Manager Config", "url" => "user-menu-config.html"],
             ]
         ],
     ];
