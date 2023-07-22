@@ -15,10 +15,7 @@
     <header class="page-header">
       <div class="header-heading-block">
         <a href="javascript:void(0);" class="header-logo">
-          <img
-            src="./assets/images/logo.png"
-            alt="header-logo"
-          />
+          <img src="./assets/images/logo.png" alt="header-logo" />
         </a>
         <button
           class="sider-toggler btn-icon-sm btn btn-outline-light"
@@ -239,42 +236,37 @@
       </div>
 
       <div class="body-header">
-        <div>
-          <div
-            class="btn-group"
-            role="group"
-            aria-label="Basic outlined example"
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            onclick="window.location.href = 'user-menu-config.html';"
           >
-            <button
-              type="button"
-              class="btn btn-outline-secondary"
-              onclick="window.location.href = 'user-menu-config.html';"
-            >
-              Menu Creation
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-secondary"
-              onclick="window.location.href = 'user-submenu-config.html';"
-            >
-              Sub Menu Creator
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-secondary"
-              onclick="window.location.href = 'user-menu-permission.html';"
-            >
-              Menu Permission
-            </button>
-            <button
-              type="button"
-              class="btn btn-success"
-              onclick="window.location.href = 'user-menu-filter.html';"
-            >
-              Create Filter
-            </button>
-          </div>
+            Menu Creation
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            onclick="window.location.href = 'user-submenu-config.html';"
+          >
+            Sub Menu Creator
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            onclick="window.location.href = 'user-menu-permission.html';"
+          >
+            Menu Permission
+          </button>
+          <button
+            type="button"
+            class="btn btn-success"
+            onclick="window.location.href = 'user-menu-filter.html';"
+          >
+            Create Filter
+          </button>
         </div>
+
         <div class="body-actions">
           <span class="text-light">Change status of Selected :</span>
 
@@ -298,15 +290,17 @@
               </li>
             </ul>
           </div>
-          <button class="btn btn-success">Update</button>
-          <button
-            class="btn btn-outline-light"
-            data-bs-toggle="modal"
-            data-bs-target="#addModal"
-          >
-            <span class="ultralysis-icon">add</span>
-            <span>Add New Record</span>
-          </button>
+          <div class="inherit-space">
+            <button class="btn btn-success">Update</button>
+            <button
+              class="btn btn-outline-light"
+              data-bs-toggle="modal"
+              data-bs-target="#addModal"
+            >
+              <span class="ultralysis-icon">add</span>
+              <span>Add New Record</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -570,12 +564,12 @@
       field: "filter_name",
       headerCheckboxSelection: true,
       checkboxSelection: true,
-      flex: 1,
-      suppressSizeToFit: true,
     },
     {
       headerName: "Company Name",
       field: "company_name",
+      flex: 1,
+      suppressSizeToFit: true,
     },
     {
       headerName: "Assigned To",
@@ -587,6 +581,7 @@
       field: "phone",
       cellRenderer: StatusRenderer,
       suppressSizeToFit: true,
+      minWidth: 80,
       width: 80,
     },
     {
@@ -594,7 +589,8 @@
       sortable: false,
       cellRenderer: ActionRenderer,
       suppressSizeToFit: true,
-      width: 110,
+      resizable: false,
+      maxWidth: 110,
     },
   ];
 
@@ -612,6 +608,9 @@
     columnDefs: columnDefs,
     defaultColDef: {
       sortable: true,
+      minWidth: 150,
+      resizable: true,
+      suppressMovable: true,
     },
     rowData: rowData,
     rowSelection: "multiple",
