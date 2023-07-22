@@ -15,15 +15,9 @@
     <header class="page-header">
       <div class="header-heading-block">
         <a href="javascript:void(0);" class="header-logo">
-          <img
-            src="http://localhost/ultralysis/assets/images/logo.png"
-            alt="header-logo"
-          />
+          <img src="./assets/images/logo.png" alt="header-logo" />
         </a>
-        <button
-          class="sider-toggler btn-icon-sm btn btn-outline-light"
-          onclick="toggleSider()"
-        >
+        <button class="sider-toggler btn-icon-sm btn btn-outline-light" onclick="toggleSider()">
           <span class="ultralysis-icon">left</span>
         </button>
       </div>
@@ -34,9 +28,7 @@
       <ul class="sider-nav">
         <li class="nav-item">
           <div class="nav-item-content" onclick="toggleMenu(this)">
-            <span class="ultralysis-icon nav-item-icon text-green">
-              category
-            </span>
+            <span class="ultralysis-icon nav-item-icon text-green"> category </span>
             <div class="nav-item-text">Manage Servers</div>
             <span class="ultralysis-icon nav-item-chevron">down</span>
           </div>
@@ -66,9 +58,7 @@
         </li>
         <li class="nav-item">
           <div class="nav-item-content" onclick="toggleMenu(this)">
-            <span class="ultralysis-icon nav-item-icon text-purple">
-              align-left
-            </span>
+            <span class="ultralysis-icon nav-item-icon text-purple"> align-left </span>
             <div class="nav-item-text">Manage Projects</div>
             <span class="ultralysis-icon nav-item-chevron">down</span>
           </div>
@@ -101,9 +91,7 @@
         </li>
         <li class="nav-item">
           <div class="nav-item-content" onclick="toggleMenu(this)">
-            <span class="ultralysis-icon nav-item-icon text-lime">
-              user-double
-            </span>
+            <span class="ultralysis-icon nav-item-icon text-lime"> user-double </span>
             <div class="nav-item-text">Manage Users</div>
             <span class="ultralysis-icon nav-item-chevron">down</span>
           </div>
@@ -133,9 +121,7 @@
         </li>
         <li class="nav-item">
           <div class="nav-item-content" onclick="toggleMenu(this)">
-            <span class="ultralysis-icon nav-item-icon text-yellow">
-              situation
-            </span>
+            <span class="ultralysis-icon nav-item-icon text-yellow"> situation </span>
             <div class="nav-item-text">Manage Usage Tracker</div>
             <span class="ultralysis-icon nav-item-chevron">down</span>
           </div>
@@ -165,9 +151,7 @@
         </li>
         <li class="nav-item">
           <div class="nav-item-content" onclick="toggleMenu(this)">
-            <span class="ultralysis-icon nav-item-icon text-light-green">
-              discount-circle
-            </span>
+            <span class="ultralysis-icon nav-item-icon text-light-green"> discount-circle </span>
             <div class="nav-item-text">Custom Project type</div>
             <span class="ultralysis-icon nav-item-chevron">down</span>
           </div>
@@ -234,13 +218,11 @@
     </aside>
     <div class="page-body">
       <div class="body-header">
-        <div class="box">
-          <div class="body-title">List Company</div>
+        <div class="box body-title">
+          <span>List Company</span>
           <span class="selected-chips">
             <span>25 Selected</span>
-            <span class="ultralysis-icon" onclick="removeParent(this)"
-              >clear</span
-            >
+            <span class="ultralysis-icon" onclick="removeParent(this)">clear</span>
           </span>
         </div>
         <div class="body-actions">
@@ -266,22 +248,20 @@
               </li>
             </ul>
           </div>
-          <button class="btn btn-outline-danger light-border">
-            <span class="ultralysis-icon">delete</span>
-            <span>Delete Selected</span>
-          </button>
-          <button class="btn btn-outline-light">
-            <span class="ultralysis-icon">upload-document</span>
-            <span>Export CSV</span>
-          </button>
-          <button
-            class="btn btn-outline-light"
-            data-bs-toggle="modal"
-            data-bs-target="#addModal"
-          >
-            <span class="ultralysis-icon">add</span>
-            <span>Add</span>
-          </button>
+          <div class="inherit-space">
+            <button class="btn btn-outline-danger light-border">
+              <span class="ultralysis-icon">delete</span>
+              <span>Delete Selected</span>
+            </button>
+            <button class="btn btn-outline-light">
+              <span class="ultralysis-icon">upload-document</span>
+              <span>Export CSV</span>
+            </button>
+            <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#addModal">
+              <span class="ultralysis-icon">add</span>
+              <span>Add</span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -306,9 +286,9 @@
                   <input class="form-control" placeholder="Type here" />
                 </div>
                 <div>
-                    <label class="form-label">phone :</label>
-                    <input class="form-control" placeholder="+88" />
-                  </div>
+                  <label class="form-label">phone :</label>
+                  <input class="form-control" placeholder="+88" />
+                </div>
                 <div>
                   <label class="form-label">Client Id :</label>
                   <input class="form-control" placeholder="Type here" />
@@ -324,16 +304,10 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-lg btn-outline-light"
-                data-bs-dismiss="modal"
-              >
+              <button type="button" class="btn btn-lg btn-outline-light" data-bs-dismiss="modal">
                 Close
               </button>
-              <button type="button" class="btn btn-lg btn-success">
-                Save changes
-              </button>
+              <button type="button" class="btn btn-lg btn-success">Save changes</button>
             </div>
           </div>
         </div>
@@ -364,43 +338,29 @@
                   <div class="box-sm">
                     <span class="selected-chips">
                       <span>Client Id</span>
-                      <span class="ultralysis-icon" onclick="removeParent(this)"
-                        >clear</span
-                      >
+                      <span class="ultralysis-icon" onclick="removeParent(this)">clear</span>
                     </span>
                     <span class="selected-chips">
                       <span>Client Id</span>
-                      <span class="ultralysis-icon" onclick="removeParent(this)"
-                        >clear</span
-                      >
+                      <span class="ultralysis-icon" onclick="removeParent(this)">clear</span>
                     </span>
                     <span class="selected-chips">
                       <span>Client Id</span>
-                      <span class="ultralysis-icon" onclick="removeParent(this)"
-                        >clear</span
-                      >
+                      <span class="ultralysis-icon" onclick="removeParent(this)">clear</span>
                     </span>
                     <span class="selected-chips">
                       <span>Client Id</span>
-                      <span class="ultralysis-icon" onclick="removeParent(this)"
-                        >clear</span
-                      >
+                      <span class="ultralysis-icon" onclick="removeParent(this)">clear</span>
                     </span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-lg btn-outline-light"
-                data-bs-dismiss="modal"
-              >
+              <button type="button" class="btn btn-lg btn-outline-light" data-bs-dismiss="modal">
                 Close
               </button>
-              <button type="button" class="btn btn-lg btn-success">
-                Save changes
-              </button>
+              <button type="button" class="btn btn-lg btn-success">Save changes</button>
             </div>
           </div>
         </div>
@@ -411,9 +371,7 @@
           <div class="modal-content">
             <div class="modal-body">
               <div class="warning-title">Warning !</div>
-              <div class="warning-text">
-                Are you sure you want to delete this company?
-              </div>
+              <div class="warning-text">Are you sure you want to delete this company?</div>
             </div>
             <div class="modal-footer">
               <button
@@ -423,9 +381,7 @@
               >
                 Close
               </button>
-              <button type="button" class="btn btn-lg btn-danger px-4">
-                Delete
-              </button>
+              <button type="button" class="btn btn-lg btn-danger px-4">Delete</button>
             </div>
           </div>
         </div>
@@ -464,12 +420,12 @@
 
 <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script>
 
-<script src="http://localhost/ultralysis/assets/js/jquery.min.js"></script>
-<script src="http://localhost/ultralysis/assets/js/popper.min.js"></script>
-<script src="http://localhost/ultralysis/assets/js/bootstrap.min.js"></script>
-<script src="http://localhost/ultralysis/assets/js/select2.full.min.js"></script>
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/select2.full.min.js"></script>
 
-<script src="http://localhost/ultralysis/assets/js/scripts.js?1690010606"></script>
+<script src="./assets/js/scripts.js?1690010606"></script>
 
 <script>
   class ActionRenderer {
@@ -557,15 +513,16 @@
       field: "phone",
       cellRenderer: StatusRenderer,
       suppressSizeToFit: true,
+      minWidth: 80,
       width: 80,
     },
     {
       headerName: "Action",
-      type: "rightAligned",
       sortable: false,
       cellRenderer: ActionRenderer,
       suppressSizeToFit: true,
-      width: 120,
+      resizable: false,
+      maxWidth: 110,
     },
   ];
 
@@ -587,6 +544,9 @@
     columnDefs: columnDefs,
     defaultColDef: {
       sortable: true,
+      minWidth: 150,
+      resizable: true,
+      suppressMovable: true,
     },
     rowData: rowData,
     rowSelection: "multiple",
