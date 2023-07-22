@@ -15,10 +15,7 @@
     <header class="page-header">
       <div class="header-heading-block">
         <a href="javascript:void(0);" class="header-logo">
-          <img
-            src="./assets/images/logo.png"
-            alt="header-logo"
-          />
+          <img src="./assets/images/logo.png" alt="header-logo" />
         </a>
         <button
           class="sider-toggler btn-icon-sm btn btn-outline-light"
@@ -235,32 +232,31 @@
 
     <div class="page-body">
       <div class="body-header fixed-to-header">
-        <div class="box">
-          <div
-            class="body-title cursor-pointer"
-            onclick="window.location.href = 'project-menu-permission.html'"
-          >
-            <div class="box">
-              <span class="ultralysis-icon icon-lg">arrow-left</span>
-              <span>Update Permission Matrix</span>
-            </div>
+        <div
+          class="body-title cursor-pointer"
+          onclick="window.location.href = 'project-menu-permission.html'"
+        >
+          <div class="box">
+            <span class="ultralysis-icon icon-lg">arrow-left</span>
+            <span>Update Permission Matrix</span>
           </div>
         </div>
       </div>
 
       <div class="body-header">
-        <div class="box">
-          <div class="body-subtitle">
-            <div class="box no-gap">
-              <span>Project Credential Matrix for Manage Servers</span>
-              <span class="ultralysis-icon icon-lg">chevron-right</span>
-              <span>List Servers</span>
-            </div>
-          </div>
+        <div class="body-subtitle w-100">
+          <span>Project Credential Matrix for Manage Servers</span>
+          <span class="ultralysis-icon icon-lg">chevron-right</span>
+          <span>List Servers</span>
         </div>
         <div class="body-actions">
           <button class="btn btn-success">Update</button>
-          <button class="btn btn-danger" onclick="window.location.href = 'project-menu-permission.html'">Cancel</button>
+          <button
+            class="btn btn-danger"
+            onclick="window.location.href = 'project-menu-permission.html'"
+          >
+            Cancel
+          </button>
         </div>
       </div>
 
@@ -406,30 +402,40 @@
       field: "all",
       cellRenderer: StatusRenderer,
       sortable: false,
+      width: 80,
+      minWidth: 80
     },
     {
       headerName: "List",
       field: "list",
       cellRenderer: StatusRenderer,
       sortable: false,
+      width: 80,
+      minWidth: 80
     },
     {
       headerName: "Add",
       field: "add",
       cellRenderer: StatusRenderer,
       sortable: false,
+      width: 80,
+      minWidth: 80
     },
     {
       headerName: "Edit",
       field: "edit",
       cellRenderer: StatusRenderer,
       sortable: false,
+      width: 80,
+      minWidth: 80
     },
     {
       headerName: "Delete",
       field: "delete",
       cellRenderer: StatusRenderer,
       sortable: false,
+      width: 80,
+      minWidth: 80
     },
   ];
 
@@ -448,6 +454,9 @@
     columnDefs: columnDefs,
     defaultColDef: {
       sortable: true,
+      minWidth: 150,
+      resizable: true,
+      suppressMovable: true,
     },
     rowData: rowData,
     rowSelection: "multiple",

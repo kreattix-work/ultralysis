@@ -230,3 +230,9 @@ div:not(.form-switch) {
   --bs-card-cap-padding-y: 10px;
   --bs-card-cap-padding-x: 0;
 }
+
+@media (max-width: 1024px) {
+  .btn-group {
+    width: 100%;
+  }
+}

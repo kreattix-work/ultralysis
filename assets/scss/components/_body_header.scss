@@ -1,4 +1,3 @@
-
 .body-header:not(.no-flex) {
   display: flex;
   gap: 12px;
@@ -47,12 +46,18 @@
 .body-subtitle {
   font-size: 16px;
   font-weight: 600;
+  display: block;
+
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 .body-actions {
   display: flex;
   gap: 8px;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -88,18 +93,19 @@
 }
 
 @media (max-width: 1024px) {
-  .body-title {
-    padding-bottom: 8px;
-    border-bottom: 1px solid $border-color;
-    width: 100%;
+  .body-header:not(.fixed-to-header) {
+    .body-title, .body-subtitle {
+      padding-bottom: 8px;
+      border-bottom: 1px solid $border-color;
+      width: 100%;
+    }
   }
-  .body-header:not(.no-flex) {
+  .body-header:not(.no-flex, .fixed-to-header) {
     flex-direction: column;
     align-items: flex-start;
   }
   .body-actions {
     align-self: flex-end;
-    flex-wrap: wrap;
     justify-content: flex-end;
   }
 }

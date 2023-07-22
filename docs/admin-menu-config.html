@@ -15,10 +15,7 @@
     <header class="page-header">
       <div class="header-heading-block">
         <a href="javascript:void(0);" class="header-logo">
-          <img
-            src="./assets/images/logo.png"
-            alt="header-logo"
-          />
+          <img src="./assets/images/logo.png" alt="header-logo" />
         </a>
         <button
           class="sider-toggler btn-icon-sm btn btn-outline-light"
@@ -232,11 +229,10 @@
         <span>Logout</span>
       </button>
     </aside>
+
     <div class="page-body">
       <div class="body-header">
-        <div class="box">
-          <div class="body-title">Admin Manager Menu Configuration</div>
-        </div>
+        <div class="body-title">Admin Manager Menu Configuration</div>
       </div>
 
       <div class="body-content">
@@ -339,16 +335,15 @@
     },
     {
       headerName: "Status",
-      field: "phone",
       cellRenderer: StatusRenderer,
     },
     {
       headerName: "Action",
-      type: "rightAligned",
       sortable: false,
       cellRenderer: ActionRenderer,
       suppressSizeToFit: true,
-      width: 170,
+      resizable: false,
+      maxWidth: 170,
     },
   ];
 
@@ -367,6 +362,9 @@
     columnDefs: columnDefs,
     defaultColDef: {
       sortable: true,
+      minWidth: 150,
+      resizable: true,
+      suppressMovable: true,
     },
     rowData: rowData,
     rowSelection: "multiple",
