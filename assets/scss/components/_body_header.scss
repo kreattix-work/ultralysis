@@ -68,6 +68,11 @@
   left: $sider-width;
   right: 0;
   padding: 0px $spacer;
+  z-index: 15;
+}
+
+.body-header.affix-to-header.fixed-to-header + * {
+  padding-top: $header-height;
 }
 
 .selected-chips {

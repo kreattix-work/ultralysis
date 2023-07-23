@@ -3,6 +3,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  overflow-y: auto;
 }
 
 header.page-header {
@@ -15,6 +16,7 @@ header.page-header {
   left: 0;
   right: 0;
   top: 0;
+  z-index: 11;
 
   .header-heading-block {
     display: flex;
@@ -212,6 +214,17 @@ aside.page-sider,
       margin-left: $sider-width;
     }
   }
+  header.page-header {
+    grid-template-columns: 1fr;
+  }
+  .body-header.fixed-to-header {
+    height: initial;
+    position: static;
+    padding: 0;
+  }
+  .header-content-block {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) { 
@@ -221,6 +234,7 @@ aside.page-sider,
   .page-body {
     min-width: 100%;
     overflow: hidden;
+    padding: 12px;
   }
   body.open-sider .page-body {
     transform: scale(0.8);

@@ -154,3 +154,12 @@ $(function () {
     },
   });
 });
+
+window.addEventListener('scroll',(event) => {
+  el = document.querySelector('.affix-to-header')
+  if(window.scrollY > 100) {
+    el.classList.add('fixed-to-header')
+  }else {
+    el.classList.remove('fixed-to-header')
+  }
+});
