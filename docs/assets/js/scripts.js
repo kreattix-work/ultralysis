@@ -1,14 +1,13 @@
 const body = document.querySelector("body");
 
 function toggleSider() {
-    if(window.innerWidth  <= 1024) {
-      body.classList.remove("close-sider");
-      body.classList.toggle("open-sider");
-    }else{
-      body.classList.remove("open-sider");
-      body.classList.toggle("close-sider");
-    }
-
+  if (window.innerWidth <= 1024) {
+    body.classList.remove("close-sider");
+    body.classList.toggle("open-sider");
+  } else {
+    body.classList.remove("open-sider");
+    body.classList.toggle("close-sider");
+  }
 }
 
 function slideDown(element, duration = 250) {
@@ -86,7 +85,9 @@ function positionDropdown(element, dropdown) {
   if (element.getAttribute("placement") === "bottom") {
     dropdown.style.top = rectElement.bottom + 8 + "px";
     dropdown.style.left =
-      rectElement.left - Math.abs(rectElement.width - rectDropdown.width) / 2 + "px";
+      rectElement.left -
+      Math.abs(rectElement.width - rectDropdown.width) / 2 +
+      "px";
   } else {
     dropdown.style.top = rectElement.top + "px";
     dropdown.style.left = rectElement.left - rectDropdown.width - 8 + "px";
@@ -137,6 +138,13 @@ function removeParent(element) {
 }
 
 $(function () {
+  setTimeout(function () {
+    $(".loader").addClass("loaded");
+    setTimeout(function () {
+      $(".loader").remove();
+    }, 400);
+  }, 1000);
+
   $(".select2").select2({
     theme: "bootstrap-5",
     minimumResultsForSearch: -1,
@@ -155,11 +163,11 @@ $(function () {
   });
 });
 
-window.addEventListener('scroll',(event) => {
-  el = document.querySelector('.affix-to-header')
-  if(window.scrollY > 100) {
-    el.classList.add('fixed-to-header')
-  }else {
-    el.classList.remove('fixed-to-header')
+window.addEventListener("scroll", (event) => {
+  el = document.querySelector(".affix-to-header");
+  if (window.scrollY > 100) {
+    el.classList.add("fixed-to-header");
+  } else {
+    el.classList.remove("fixed-to-header");
   }
 });
